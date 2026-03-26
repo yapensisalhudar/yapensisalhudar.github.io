@@ -112,7 +112,7 @@
     .hero-swiper { width: 100%; height: 100%; }
     .swiper-slide { position: relative; height: 600px; display: flex; align-items: center; justify-content: center; background-size: cover; background-position: center; }
     .swiper-slide::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.55); z-index: 1; }
-    .slide-content { position: relative; z-index: 10; text-align: center; color: white; max-w-2xl px-4; animation: fadeUp 0.8s ease-out forwards; opacity: 0; }
+    .slide-content { position: relative; z-index: 10; text-align: center; color: white; max-w-2xl px-; animation: fadeUp 0.8s ease-out forwards; opacity: 0; }
     .slide-content h2 { font-size: clamp(1.875rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 0.75rem; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
     .slide-content p { font-size: clamp(0.875rem, 2vw, 1.125rem); color: rgba(255,255,255,0.95); margin-bottom: 2rem; line-height: 1.6; }
     .slide-button { display: inline-flex; align-items: center; gap: 0.5rem; background: #FBBF24; color: #004d26; font-weight: 700; padding: 0.875rem 2rem; border-radius: 9999px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 8px 20px rgba(251,191,36,0.3); border: none; cursor: pointer; font-size: 0.875rem; }
@@ -138,7 +138,7 @@
         <img src="assets/logo.png" class="h-12 w-auto">
        </div>
        <div class="leading-tight">
-        <span id="navSchoolName" class="text-white font-bold text-base sm:text-lg tracking-tight">Al-Huda Ridlwaniyah</span> <span class="text-green-200 text-xs block hidden sm:block">YAPENSIS</span>
+        <span id="navSchoolName" class="text-white font-bold text-base sm:text-lg tracking-tight">Al-Huda Ridlwaniyah</span> <span class="text-green-200 text-xs block hidden sm:block">مؤسسد المعهد  ودارالايتام  الهدى رضوانية الا سسلاميى</span>
        </div>
       </div>
       <nav class="hidden lg:flex items-center gap-1 text-sm"><a href="#beranda" class="text-white hover:bg-nu-light px-3 py-2 rounded-lg transition flex items-center gap-1.5"><i data-lucide="home" style="width:15px;height:15px"></i> Beranda</a>
@@ -149,11 +149,12 @@
        <div class="nav-item relative"><button class="text-white hover:bg-nu-light px-3 py-2 rounded-lg transition flex items-center gap-1.5"><i data-lucide="newspaper" style="width:15px;height:15px"></i> Informasi <i data-lucide="chevron-down" style="width:13px;height:13px"></i></button>
         <div class="nav-dropdown absolute top-full left-0 mt-1 bg-white rounded-xl shadow-xl py-2 min-w-[160px] border border-gray-100"><a href="#berita" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-nu transition text-sm">Berita</a> <a href="#galeri" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-nu transition text-sm">Galeri</a> <a href="#faq" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-nu transition text-sm">FAQ</a>
         </div>
-       </div><a href="#testimoni" class="text-white hover:bg-nu-light px-3 py-2 rounded-lg transition flex items-center gap-1.5"><i data-lucide="message-circle" style="width:15px;height:15px"></i> Testimoni</a> <a href="#kontak" class="text-white hover:bg-nu-light px-3 py-2 rounded-lg transition flex items-center gap-1.5"><i data-lucide="phone" style="width:15px;height:15px"></i> Kontak</a> <button id="darkToggle" class="text-white hover:bg-nu-light p-2 rounded-lg transition ml-2" title="Dark Mode"><i data-lucide="moon" style="width:18px;height:18px"></i></button>
+       </div><a href="#Penyantun" class="text-white hover:bg-nu-light px-3 py-2 rounded-lg transition flex items-center gap-1.5"><i data-lucide="message-circle" style="width:15px;height:15px"></i> Penyantun</a> <a href="#kontak" class="text-white hover:bg-nu-light px-3 py-2 rounded-lg transition flex items-center gap-1.5"><i data-lucide="phone" style="width:15px;height:15px"></i> Kontak</a> <button id="darkToggle" class="text-white hover:bg-nu-light p-2 rounded-lg transition ml-2" title="Dark Mode"><i data-lucide="moon" style="width:18px;height:18px"></i></button>
       </nav><button id="mobileMenuBtn" class="lg:hidden text-white p-2 rounded-lg hover:bg-nu-light transition"><i data-lucide="menu" style="width:24px;height:24px"></i></button>
      </div>
      <div id="mobileMenu" class="mobile-menu lg:hidden">
-      <div class="pb-4 space-y-1"><a href="#beranda" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Beranda</a> <a href="#guru" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Guru</a> <a href="#program" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Program</a> <a href="#galeri" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Galeri</a> <a href="#faq" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">FAQ</a> <a href="#testimoni" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Testimoni</a> <a href="#kontak" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Kontak</a>
+      <div class="pb-4 space-y-1"><a href="#beranda" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Beranda</a> <a href="#guru" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Guru</a> <a href="#program" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Program</a> <a href="#galeri" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Galeri</a> <a href="#faq" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">FAQ</a> <a href="Penyantun
+        " class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Penyantun</a> <a href="#kontak" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Kontak</a>
       </div>
      </div>
     </div>
@@ -186,21 +187,21 @@
    <section class="relative z-20 -mt-24 mb-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-      <div class="info-card bg-nu rounded-2xl p-6 text-white shadow-xl anim-scale-in delay-1">
+      <div class="info-card bg-nu rounded-2xl p-6 text-white shadow-xl hover:scale-105 transition">
        <div class="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center mb-4">
         <i data-lucide="graduation-cap" class="text-gold" style="width:24px;height:24px"></i>
        </div>
        <h3 class="font-bold text-lg mb-2">PSB 2026</h3>
        <p class="text-green-100 text-sm leading-relaxed mb-3">Pendaftaran Santri Baru telah dibuka! Daftar segera untuk tahun ajaran baru.</p><a href="#kontak" class="text-gold text-sm font-semibold hover:underline inline-flex items-center gap-1">Selengkapnya <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
       </div>
-      <div class="info-card bg-nu rounded-2xl p-6 text-white shadow-xl anim-scale-in delay-2">
+      <div class="info-card bg-nu rounded-2xl p-6 text-white shadow-xl hover:scale-105 transition">
        <div class="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center mb-4">
         <i data-lucide="trophy" class="text-gold" style="width:24px;height:24px"></i>
        </div>
        <h3 class="font-bold text-lg mb-2">Ekstrakurikuler</h3>
        <p class="text-green-100 text-sm leading-relaxed mb-3">Pramuka, Pencak Silat, Hadroh, Kaligrafi, dan berbagai kegiatan pengembangan diri.</p><a href="#program" class="text-gold text-sm font-semibold hover:underline inline-flex items-center gap-1">Selengkapnya <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
       </div>
-      <div class="info-card bg-nu rounded-2xl p-6 text-white shadow-xl anim-scale-in delay-3">
+      <div class="info-card bg-nu rounded-2xl p-6 text-white shadow-xl hover:scale-105 transition">
        <div class="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center mb-4">
         <i data-lucide="book-open" class="text-gold" style="width:24px;height:24px"></i>
        </div>
@@ -209,6 +210,69 @@
       </div>
      </div>
     </div>
+    </section>
+    <!-- VISI MISI PREMIUM -->
+<section id="visi-misi" class="py-20 bg-gradient-to-br from-nu to-green-800 text-white relative overflow-hidden">
+
+  <!-- overlay -->
+  <div class="absolute inset-0 bg-black/30"></div>
+
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Judul -->
+    <div class="text-center mb-14">
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-3">
+        Visi & Misi
+      </h2>
+      <div class="w-20 h-1 bg-gold mx-auto rounded-full mb-4"></div>
+      <p class="text-green-100 text-sm max-w-xl mx-auto">
+        Arah dan tujuan dalam membangun generasi islami yang unggul
+      </p>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- VISI -->
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-xl hover:scale-105 transition duration-300">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center">
+            <i data-lucide="eye" class="text-gold" style="width:24px;height:24px"></i>
+          </div>
+          <h3 class="text-xl font-bold">Visi</h3>
+        </div>
+
+        <p class="text-green-100 text-sm leading-relaxed">
+          “Terwujudnya generasi berakhlakul karimah, berilmu, mandiri,
+          dan berdaya guna bagi umat melalui pendidikan dan pelayanan sosial
+          berbasis nilai-nilai Islam ahlussunnah wal jamaah an-nahdliyah.”
+        </p>
+      </div>
+
+      <!-- MISI -->
+      <div class="bg-white rounded-2xl p-8 shadow-xl hover:scale-105 transition duration-300 text-gray-800">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 bg-nu/10 rounded-xl flex items-center justify-center">
+            <i data-lucide="target" class="text-nu" style="width:24px;height:24px"></i>
+          </div>
+          <h3 class="text-xl font-bold">Misi</h3>
+        </div>
+
+        <ul class="space-y-3 text-sm leading-relaxed">
+          <li>✔ Pendidikan Islam (TPQ, Madin, Pesantren)</li>
+          <li>✔ Pembinaan akhlak berbasis Al-Qur’an & Sunnah</li>
+          <li>✔ Pelayanan sosial (yatim & dhuafa)</li>
+          <li>✔ Pemberdayaan masyarakat berbasis syariah</li>
+          <li>✔ Peningkatan kualitas tenaga pendidik</li>
+          <li>✔ Pengembangan sarana prasarana</li>
+          <li>✔ Kemitraan dengan masyarakat & pemerintah</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
    </section><!-- STRUKTUR ORGANISASI -->
    <section class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -218,7 +282,7 @@
       <p class="text-gray-500 text-sm max-w-lg mx-auto">Kepemimpinan bersama untuk kemajuan bersama</p>
      </div><!-- Level 1: Pendiri -->
      <div class="flex justify-center mb-10">
-      <div class="text-center">
+      <div class="text-center hover:scale-105 transition">
        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-3 shadow-sm border-2 border-nu/20">
         <img src="assets/pendiri.jpeg" class="w-full h-full object-cover">
         </div>
@@ -230,25 +294,25 @@
      </div><!-- Level 2: Pembina -->
      <div class="flex justify-center items-start gap-8 mb-10 px-4 flex-wrap"><!-- Left Pengawas Group -->
       <div class="flex flex-col gap-3">
-       <div class="text-center">
+       <div class="text-center hover:scale-105 transition">
         <div class="w-20 h-20 rounded-full bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center mx-auto mb-2 shadow-sm border-2 border-gold/20"><i data-lucide="shield" class="text-gold-dark" style="width:32px;height:32px"></i>
         </div>
         <p class="font-bold text-gray-800 text-xs mb-1">Kak Zainuddin</p><span class="inline-block bg-gold/10 text-gold-dark text-xs font-semibold px-2 py-0.5 rounded-full">Pengawas</span>
        </div>
-       <div class="text-center">
+       <div class="text-center hover:scale-105 transition">
         <div class="w-20 h-20 rounded-full bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center mx-auto mb-2 shadow-sm border-2 border-gold/20"><i data-lucide="shield" class="text-gold-dark" style="width:32px;height:32px"></i>
         </div>
         <p class="font-bold text-gray-800 text-xs mb-1">Kak Faridul Ittihad, S.Fil.I</p><span class="inline-block bg-gold/10 text-gold-dark text-xs font-semibold px-2 py-0.5 rounded-full">Pengawas</span>
        </div>
       </div><!-- Center Pembina -->
       <div class="flex flex-col items-center gap-6">
-       <div class="text-center">
+       <div class="text-center hover:scale-105 transition">
         <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-3 shadow-sm border-2 border-nu/20">
         <img src="assets/kak adib pengawas.jpeg" class="w-full h-full object-cover">
         </div>
         <p class="font-bold text-gray-800 text-sm mb-1">Kak Adib Susilo</p><span class="inline-block bg-nu/10 text-nu text-xs font-semibold px-3 py-1 rounded-full">Pembina</span>
        </div>
-       <div class="text-center">
+       <div class="text-center hover:scale-105 transition">
         <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-3 shadow-sm border-2 border-nu/20">
         <img src="assets/kak zainudin pengawas.jpeg" class="w-full h-full object-cover">
         </div>
@@ -256,12 +320,12 @@
        </div>
       </div><!-- Right Penyantun Group -->
       <div class="flex flex-col gap-3">
-       <div class="text-center">
+       <div class="text-center hover:scale-105 transition">
         <div class="w-20 h-20 rounded-full bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center mx-auto mb-2 shadow-sm border-2 border-gold/20"><i data-lucide="heart-handshake" class="text-gold-dark" style="width:32px;height:32px"></i>
         </div>
         <p class="font-bold text-gray-800 text-xs mb-1">Dr. H. Muh Junaidi, SHI, MH</p><span class="inline-block bg-gold/10 text-gold-dark text-xs font-semibold px-2 py-0.5 rounded-full">Penyantun</span>
        </div>
-       <div class="text-center">
+       <div class="text-center hover:scale-105 transition">
         <div class="w-20 h-20 rounded-full bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center mx-auto mb-2 shadow-sm border-2 border-gold/20"><i data-lucide="heart-handshake" class="text-gold-dark" style="width:32px;height:32px"></i>
         </div>
         <p class="font-bold text-gray-800 text-xs mb-1">Dr. Diding Rahmat, SH., MH</p><span class="inline-block bg-gold/10 text-gold-dark text-xs font-semibold px-2 py-0.5 rounded-full">Penyantun</span>
@@ -270,7 +334,7 @@
      </div><!-- Divider -->
      <div class="border-t border-gray-200 my-12"></div><!-- Level 1: Ketua Pengurus -->
      <div class="flex justify-center mb-10">
-      <div class="text-center">
+      <div class="text-center hover:scale-105 transition">
        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-3 shadow-sm border-2 border-nu/20">
       <img src="assets/ketua.jpeg" class="w-full h-full object-cover object-top">
     </div>
@@ -283,7 +347,7 @@
 <div class="flex justify-center gap-16 mb-10 px-4 flex-wrap">
 
   <!-- Sekretaris -->
-  <div class="text-center">
+  <div class="text-center hover:scale-105 transition">
     <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-3 shadow-sm border-2 border-gold/20">
       <img src="assets/sekertaris.jpeg" class="w-full h-full object-cover object-top">
     </div>
@@ -296,12 +360,12 @@
   </div>
 
   <!-- Bendahara -->
-  <div class="text-center">
+  <div class="text-center hover:scale-105 transition">
     <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-3 shadow-sm border-2 border-gold/20">
       <img src="assets/bendahara.jpeg" class="w-full h-full object-cover object-top">
     </div>
     <p class="font-bold text-gray-800 text-xs mb-1">
-      Mbak Hj. Hanik Latifah, S.Ag
+      Mbak Hj. Hanik Latifah, S.Ag.
     </p>
     <span class="inline-block bg-gold/10 text-gold-dark text-xs font-semibold px-2 py-0.5 rounded-full">
       Bendahara
@@ -312,34 +376,34 @@
      </div><!-- Level 3: Bidang-bidang -->
      <div class="grid grid-cols-2 gap-8 max-w-2xl mx-auto mb-10 px-4"><!-- Left Column -->
       <div class="space-y-4">
-       <div class="text-center">
+       <div class="text-center hover:scale-105 transition">
         <div class="w-16 h-16 rounded-full bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center mx-auto mb-2 shadow-sm border border-green-200"><i data-lucide="book" class="text-green-600" style="width:24px;height:24px"></i>
         </div>
         <p class="font-bold text-gray-800 text-xs mb-1">Kak Turaichan M.Pd</p><span class="inline-block bg-green-50 text-green-700 text-xs font-semibold px-2 py-0.5 rounded text-center">Pendidikan &amp; Kurikulum</span>
        </div>
-       <div class="text-center">
+       <div class="text-center hover:scale-105 transition">
         <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center mx-auto mb-2 shadow-sm border border-blue-200"><i data-lucide="heart" class="text-blue-600" style="width:24px;height:24px"></i>
         </div>
         <p class="font-bold text-gray-800 text-xs mb-1">Kak Drs. Muhid</p><span class="inline-block bg-blue-50 text-blue-700 text-xs font-semibold px-2 py-0.5 rounded text-center">Kepedulian Sosial &amp; Humas</span>
        </div>
-       <div class="text-center">
+       <div class="text-center hover:scale-105 transition">
         <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-100 to-purple-50 flex items-center justify-center mx-auto mb-2 shadow-sm border border-purple-200"><i data-lucide="users" class="text-purple-600" style="width:24px;height:24px"></i>
         </div>
         <p class="font-bold text-gray-800 text-xs mb-1">Mbak Ifadah S.Pd</p><span class="inline-block bg-purple-50 text-purple-700 text-xs font-semibold px-2 py-0.5 rounded text-center">Generasi Kepemudaan</span>
        </div>
       </div><!-- Right Column -->
       <div class="space-y-4">
-       <div class="text-center">
+       <div class="text-center hover:scale-105 transition">
         <div class="w-16 h-16 rounded-full bg-gradient-to-br from-pink-100 to-pink-50 flex items-center justify-center mx-auto mb-2 shadow-sm border border-pink-200"><i data-lucide="flower" class="text-pink-600" style="width:24px;height:24px"></i>
         </div>
         <p class="font-bold text-gray-800 text-xs mb-1">Mbak Masruroh</p><span class="inline-block bg-pink-50 text-pink-700 text-xs font-semibold px-2 py-0.5 rounded text-center">Kemuslimatan &amp; Perempuan</span>
        </div>
-       <div class="text-center">
+       <div class="text-center hover:scale-105 transition">
         <div class="w-16 h-16 rounded-full bg-gradient-to-br from-red-100 to-red-50 flex items-center justify-center mx-auto mb-2 shadow-sm border border-red-200"><i data-lucide="hands-praying" class="text-red-600" style="width:24px;height:24px"></i>
         </div>
         <p class="font-bold text-gray-800 text-xs mb-1">Mbak Nor Hayati</p><span class="inline-block bg-red-50 text-red-700 text-xs font-semibold px-2 py-0.5 rounded text-center">Kepedulian Sosial &amp; Humas</span>
        </div>
-       <div class="text-center">
+       <div class="text-center hover:scale-105 transition">
         <div class="w-16 h-16 rounded-full bg-gradient-to-br from-orange-100 to-orange-50 flex items-center justify-center mx-auto mb-2 shadow-sm border border-orange-200"><i data-lucide="users" class="text-orange-600" style="width:24px;height:24px"></i>
         </div>
         <p class="font-bold text-gray-800 text-xs mb-1">Kak Angga</p><span class="inline-block bg-orange-50 text-orange-700 text-xs font-semibold px-2 py-0.5 rounded text-center">Generasi Kepemudaan</span>
@@ -347,7 +411,7 @@
       </div>
      </div><!-- Level 4: Seni -->
      <div class="flex justify-center mb-10 px-4">
-      <div class="text-center max-w-xs">
+      <div class="text-center hover:scale-105 transition">
        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-100 to-yellow-50 flex items-center justify-center mx-auto mb-2 shadow-sm border border-yellow-200"><i data-lucide="music" class="text-yellow-600" style="width:24px;height:24px"></i>
        </div>
        <p class="font-bold text-gray-800 text-xs mb-1">Kak Ribhanul Huda</p><span class="inline-block bg-yellow-50 text-yellow-700 text-xs font-semibold px-2 py-0.5 rounded">Kesenian &amp; Kreativitas</span>
@@ -524,11 +588,12 @@
 
     </div>
   </div>
-</section><!-- TESTIMONI -->
+</section><!-- TESTIMON -->
    <section id="testimoni" class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
      <div class="text-center mb-10"><span class="text-nu font-semibold text-sm tracking-wide uppercase">Dukungan</span>
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-2 mb-3">Testimoni Penyantun</h2>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-2 mb-3">
+        Penyantun</h2>
       <div class="section-divider mx-auto mb-4"></div>
      </div>
      <div class="relative">
@@ -566,10 +631,10 @@
          <i data-lucide="map-pin" class="text-gold flex-shrink-0 mt-0.5" style="width:15px;height:15px"></i> <span>Jl. Jalan Raya, Hutan Jati,Pancur, Mayong,Jepara Regency, Central Java 59465</span>
         </div>
         <div class="flex items-center gap-2">
-         <i data-lucide="phone" class="text-gold flex-shrink-0" style="width:15px;height:15px"></i> <span>(0231) 123-4567</span>
+         <i data-lucide="phone" class="text-gold flex-shrink-0" style="width:15px;height:15px"></i> <span>(+62 858-0094-3700)</span>
         </div>
         <div class="flex items-center gap-2">
-         <i data-lucide="mail" class="text-gold flex-shrink-0" style="width:15px;height:15px"></i> <span>info@alhuda-ridlwaniyah.sch.id</span>
+         <i data-lucide="mail" class="text-gold flex-shrink-0" style="width:15px;height:15px"></i> <span>yapensisalhudar@gmail.com</span>
         </div>
        </div>
       </div>
@@ -587,11 +652,20 @@
       </div>
      </div>
      <div class="border-t border-gray-700/50 pt-5 text-center">
-      <p class="text-gray-500 text-xs">© 2024 Dikelola Oleh Tim Creative PP. Al-Huda Ridlwaniyah.</p>
+      <p class="text-gray-500 text-xs">© 2024 Tim Creative PP.Al-Huda Ridlwaniyah</p>
      </div>
     </div>
+    <div class="fixed bottom-16 right-5 z-50 flex items-end gap-3">
+  
+  <!-- TEXT BUBBLE -->
+  <div class="bg-white shadow-lg rounded-xl px-4 py-3 text-sm text-gray-700 max-w-xs animate-fade-in">
+    Ingin melakukan pendaftaran di 
+    <span class="text-green-600 font-semibold">Al- Huda Ridlwaniyah</span>? 
+    Konsultasi gratis
+  </div>
+
    </footer><!-- FLOATING WA BUBBLE -->
-   <div class="fixed bottom-5 right-5 z-50"><a href="https://wa.me/62XXXXXXXXXX" target="_blank" rel="noopener noreferrer" class="wa-bubble w-14 h-14 bg-green-500 rounded-full shadow-xl flex items-center justify-center hover:bg-green-600 transition" title="Konsultasi via WhatsApp">
+   <div class="fixed bottom-1 right-5 z-50"><a href="https://wa.me/62XXXXXXXXXX" target="_blank" rel="noopener noreferrer" class="wa-bubble w-14 h-14 bg-green-500 rounded-full shadow-xl flex items-center justify-center hover:bg-green-600 transition" title="Konsultasi via WhatsApp">
      <svg viewbox="0 0 24 24" width="28" height="28" fill="white">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
      </svg></a> <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white animate-pulse"></span>
@@ -768,13 +842,13 @@
     const defaultConfig = {
       school_name: 'Al-Huda Ridlwaniyah',
       slide1_title: 'Gabung di Al-Huda Ridlwaniyah',
-      slide1_subtitle: 'Sekolah unggulan berbasis nilai-nilai Islam dan teknologi. Raih masa depan cerah bersama kami.',
+      slide1_subtitle: 'Ponpes berbasis nilai-nilai Islam dan teknologi.',
       slide1_cta: 'Daftar Sekarang',
       slide2_title: 'Lingkungan Islami dan Nyaman',
       slide2_subtitle: 'Membangun karakter siswa yang berakhlak, mandiri, dan berprestasi.',
       slide2_cta: 'Hubungi Kami',
       slide3_title: 'Fasilitas Lengkap & Modern',
-      slide3_subtitle: 'Dari laboratorium hingga perpustakaan digital. Belajar lebih nyaman dan menyenangkan.',
+      slide3_subtitle: 'Dari Broadcasting,Pingpong,Rebana,Panjat Tebing. Belajar lebih nyaman dan menyenangkan.',
       slide3_cta: 'Lihat Fasilitas',
       prefooter_title: 'Yuk Bergabung Bersama Kami!',
       background_color: '#ffffff',
