@@ -1,33 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id" class="h-full scroll-smooth">
-</head>
-<meta name="google-adsense-account" content="ca-pub-9208046627553950">
-<meta name="google-site-verification" content="lcpJBaQF-o7H-6wc0Uf-duquE9Tnbi05Bl5kppmsfbI" />
+
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="google-adsense-account" content="ca-pub-9208046627553950">
+  <meta name="google-site-verification" content="lcpJBaQF-o7H-6wc0Uf-duquE9Tnbi05Bl5kppmsfbI" />
+
   <title>Al-Huda Ridlwaniyah</title>
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+  <!-- Lucide Icon -->
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+
+  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            nu: { DEFAULT: '#006633', dark: '#004d26', light: '#008040' },
-            gold: { DEFAULT: '#FBBF24', dark: '#D4A017', light: '#FCD34D' },
-            navy: { DEFAULT: '#0f172a', light: '#1e293b' }
-          },
-          fontFamily: {
-            body: ['"Plus Jakarta Sans"', 'sans-serif'],
-            arabic: ['"Amiri"', 'serif']
-          }
+
+  <!-- Tailwind Config -->
+ <script>
+  tailwind.config = {
+    darkMode: 'class', // Mengaktifkan mode gelap berbasis class CSS
+    theme: {
+      extend: {
+        colors: {
+          nu: { DEFAULT: '#006633', dark: '#004d26' },
+          gold: { DEFAULT: '#FBBF24', dark: '#D4A017' },
+          navy: { DEFAULT: '#0f172a', light: '#1e293b' }
         }
       }
     }
-  </script>
+  }
+</script>
+</head>
+<body class="h-full font-body text-gray-800 bg-white transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
+
+  <!-- ISI WEBSITE KAMU DI SINI -->
+
   <style>
     html { height: 100%; }
     body { height: 100%; margin: 0; }
@@ -71,7 +86,10 @@
       background-size: 100% 100%, 100% 100%, 60px 60px;
     }
 
-    .nav-dropdown { display: none; }
+    .nav-dropdown {
+       display: none; 
+       z-index: index 999;
+      }
     .nav-item:hover .nav-dropdown { display: block; }
 
     .info-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
@@ -140,7 +158,7 @@
         <img src="assets/logo.png" class="h-12 w-auto">
        </div>
        <div class="leading-tight">
-        <span id="navSchoolName" class="text-white font-bold text-base sm:text-lg tracking-tight">Al-Huda Ridlwaniyah</span> <span class="text-green-200 text-xs block hidden sm:block">مؤسسد المعهد  ودارالايتام  الهدى رضوانية الا سسلاميى</span>
+        <span id="navSchoolName" class="text-white font-bold text-base sm:text-lg tracking-tight">YAPENSIS Al-HUDA RIDLWANIYAH</span> <span class="text-green-200 text-xs block hidden sm:block">مؤسسد المعهد  ودارالايتام  الهدى رضوانية الا سسلاميى</span>
        </div>
       </div>
       <nav class="hidden lg:flex items-center gap-1 text-sm"><a href="#beranda" class="text-white hover:bg-nu-light px-3 py-2 rounded-lg transition flex items-center gap-1.5"><i data-lucide="home" style="width:15px;height:15px"></i> Beranda</a>
@@ -151,7 +169,7 @@
        <div class="nav-item relative"><button class="text-white hover:bg-nu-light px-3 py-2 rounded-lg transition flex items-center gap-1.5"><i data-lucide="newspaper" style="width:15px;height:15px"></i> Informasi <i data-lucide="chevron-down" style="width:13px;height:13px"></i></button>
         <div class="nav-dropdown absolute top-full left-0 mt-1 bg-white rounded-xl shadow-xl py-2 min-w-[160px] border border-gray-100"><a href="#berita" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-nu transition text-sm">Berita</a> <a href="#galeri" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-nu transition text-sm">Galeri</a> <a href="#faq" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-nu transition text-sm">FAQ</a>
         </div>
-       </div><a href="#Penyantun" class="text-white hover:bg-nu-light px-3 py-2 rounded-lg transition flex items-center gap-1.5"><i data-lucide="message-circle" style="width:15px;height:15px"></i> Penyantun</a> <a href="#kontak" class="text-white hover:bg-nu-light px-3 py-2 rounded-lg transition flex items-center gap-1.5"><i data-lucide="phone" style="width:15px;height:15px"></i> Kontak</a> <button id="darkToggle" class="text-white hover:bg-nu-light p-2 rounded-lg transition ml-2" title="Dark Mode"><i data-lucide="moon" style="width:18px;height:18px"></i></button>
+       </div><a > <a href="#kontak" class="text-white hover:bg-nu-light px-3 py-2 rounded-lg transition flex items-center gap-1.5"><i data-lucide="phone" style="width:15px;height:15px"></i> Kontak</a> <button id="darkToggle" class="text-white hover:bg-nu-light p-2 rounded-lg transition ml-2" title="Dark Mode"><i data-lucide="moon" style="width:18px;height:18px"></i></button>
       </nav><button id="mobileMenuBtn" class="lg:hidden text-white p-2 rounded-lg hover:bg-nu-light transition"><i data-lucide="menu" style="width:24px;height:24px"></i></button>
      </div>
      <div id="mobileMenu" class="mobile-menu lg:hidden">
@@ -167,7 +185,7 @@
       <div class="swiper-slide" style="background-image: url('assets/alhuda\ depan.jpeg');">
        <div class="slide-content">
         <h2 id="slide1Title">Gabung di Al-Huda Ridlwaniyah</h2>
-        <p id="slide1Subtitle">Sekolah unggulan berbasis nilai-nilai Islam dan teknologi. Raih masa depan cerah bersama kami.</p><button class="slide-button" onclick="document.getElementById('kontak').scrollIntoView({behavior:'smooth'});"><i data-lucide="user-plus" style="width:17px;height:17px"></i> <span id="slide1Cta">Daftar Sekarang</span></button>
+        <p id="slide1Subtitle">Ponpes unggulan berbasis nilai-nilai Islam dan teknologi. Raih masa depan cerah bersama kami.</p><button class="slide-button" onclick="document.getElementById('kontak').scrollIntoView({behavior:'smooth'});"><i data-lucide="user-plus" style="width:17px;height:17px"></i> <span id="slide1Cta">Daftar Sekarang</span></button>
        </div>
       </div>
       <div class="swiper-slide" style="background-image: url('assets/pekan\ madaris\ x.jpeg');">
@@ -176,10 +194,12 @@
         <p id="slide2Subtitle">Membangun karakter siswa yang berakhlak, mandiri, dan berprestasi.</p><button class="slide-button" onclick="window.open('https://wa.me/6281234567890', '_blank');"><i data-lucide="phone" style="width:17px;height:17px"></i> <span id="slide2Cta">Hubungi Kami</span></button>
        </div>
       </div>
-      <div class="swiper-slide" style="background-image: url('assets/impian.jpeg">
+      <<div class="swiper-slide" style="background-image: url('assets/impian.jpeg');">
        <div class="slide-content">
-        <h2 id="slide3Title">Fasilitas Lengkap &amp; Modern</h2>
-        <p id="slide3Subtitle">Dari laboratorium hingga perpustakaan digital. Belajar lebih nyaman dan menyenangkan.</p><button class="slide-button" onclick="document.getElementById('galeri').scrollIntoView({behavior:'smooth'});"><i data-lucide="book-open" style="width:17px;height:17px"></i> <span id="slide3Cta">Lihat Fasilitas</span></button>
+        <h2 id="slide3Title">Fasilitas Lengkap 
+
+        </h2>
+        <p id="slide3Subtitle">Dari Ruang Broadcasting. Belajar lebih nyaman dan menyenangkan.</p><button class="slide-button" onclick="document.getElementById('galeri').scrollIntoView({behavior:'smooth'});"><i data-lucide="book-open" style="width:17px;height:17px"></i> <span id="slide3Cta">Lihat Fasilitas</span></button>
        </div>
       </div>
      </div>
@@ -214,7 +234,8 @@
     </div>
     </section>
     <!-- VISI MISI PREMIUM -->
-<section id="visi-misi" class="py-20 bg-gradient-to-br from-nu to-green-800 text-white relative overflow-hidden">
+<section id="profil" class="py-20 bg-gradient-to-br from-nu to-green-800 text-white relative overflow-hidden">
+
 
   <!-- overlay -->
   <div class="absolute inset-0 bg-black/30"></div>
@@ -430,9 +451,9 @@
   <a href="https://www.instagram.com/yapensis.alhudar/" target="_blank"
      class="text-center hover:scale-105 transition">
     <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-3 shadow-md border-2 border-pink-400">
-      <img src="assets/sar.png" class="w-full h-full object-cover">
+      <img src="assets/maul.jpeg" class="w-full h-full object-cover">
     </div>
-    <p class="font-bold text-gray-800 text-xs mb-1">Kak Muhammad Ansar M</p>
+    <p class="font-bold text-gray-800 text-xs mb-1">Kak Maulana Sidiq</p>
     <span class="inline-block bg-pink-50 text-pink-700 text-xs font-semibold px-2 py-0.5 rounded">
       Instagram
     </span>
@@ -646,11 +667,21 @@
        </div>
        <p class="text-gray-500 text-xs mt-4">Ikuti kami untuk info terbaru seputar kegiatan dan pendaftaran.</p>
       </div>
-      <div id="lokasi">
-       <h4 class="text-white font-bold mb-4 text-sm">Lokasi Madrasah</h4><a href="https://www.google.com/maps/place/YAYASAN+AL+HUDA+RIDLWANIYAH/@-6.6794797,110.7664853,17z" target="_blank" rel="noopener noreferrer" class="w-full h-36 rounded-xl bg-navy-light border border-gray-700 flex items-center justify-center overflow-hidden hover:border-gold transition">
-        <div class="text-center">
-         <i data-lucide="map" class="text-gray-500 mx-auto mb-2" style="width:28px;height:28px"></i> <span class="text-gray-500 text-xs">Google Maps</span>
-        </div></a>
+<div id="lokasi" class="space-y-4">
+  <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Lokasi Madrasah</h4>
+  
+  <div class="w-full h-48 rounded-xl overflow-hidden border border-gray-700 hover:border-gold transition-all duration-300 shadow-lg bg-gray-800">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.661138240212!2d110.6865201!3d-6.6888494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e711ef8417726cb%3A0xc3e659b8702c2e0b!2sYAYASAN%20AL%20HUDA%20RIDLWANIYAH!5e0!3m2!1sid!2sid!4v1715456789012!5m2!1sid!2sid" 
+      width="100%" 
+      height="100%" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
       </div>
      </div>
      <div class="border-t border-gray-700/50 pt-5 text-center">
@@ -831,15 +862,18 @@
     });
 
     // Dark Mode
-    let darkMode = false;
-    document.getElementById('darkToggle').addEventListener('click', function() {
-      darkMode = !darkMode;
-      this.innerHTML = darkMode
-        ? '<i data-lucide="sun" style="width:18px;height:18px"></i>'
-        : '<i data-lucide="moon" style="width:18px;height:18px"></i>';
-      lucide.createIcons();
-    });
+    const toggleBtn = document.getElementById('darkToggle');
+toggleBtn.addEventListener('click', function () {
+  document.documentElement.classList.toggle('dark');
 
+  const isDark = document.documentElement.classList.contains('dark');
+  this.innerHTML = isDark
+    ? '<i data-lucide="sun" style="width:18px;height:18px"></i>'
+    : '<i data-lucide="moon" style="width:18px;height:18px"></i>';
+
+  lucide.createIcons();
+  
+});
     // Element SDK
     const defaultConfig = {
       school_name: 'Al-Huda Ridlwaniyah',
@@ -947,5 +981,18 @@
     renderGuru();
     renderTesti();
     lucide.createIcons();
+    // Smooth scroll fix
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
   </script>
  
