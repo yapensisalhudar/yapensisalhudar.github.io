@@ -1,998 +1,721 @@
-<!DOCTYPE html>
-<html lang="id" class="h-full scroll-smooth">
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>WAPALHI Jepara</title>
+
+<!-- Fonts & CSS -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+<style>
+:root{
+    --primary:#0b251a;
+    --accent:#ffb703;
+    --bg:#f4f7f6;
+}
+
+/* ICON GAMBAR DIVISI*/
+.divisi-icon img {
+    height: 120px;      /* ukuran seragam */
+    width: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.divisi-card:hover .divisi-icon img {
+    transform: scale(1.15);
+}
+
+/* CARD BIAR LEBIH HALUS */
+.divisi-card {
+    background: #fff;
+    padding: 25px 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.divisi-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+shadow: 0 15px 30px rgba(0,0,0,0.15);
+
+/* BRAND (LOGO + TEXT) */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* jarak rapat & konsisten */
+}
+
+/* LOGO WAPALHI UKURAN*/
+.logo-img {
+    height: 78px;     /* ukuran ideal navbar */
+    width: auto;
+    object-fit: contain;
+}
+LOGO WAPALHI
+
+/* TEXT */
+.brand-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1;
+}
+
+/* WARNA JEPARA */
+.brand-text .accent {
+    color: var(--accent);
+}
+
+/* NAV BIAR RAPI */
+.nav {
+    gap: 15px;
+}
+
+.nav-link {
+    padding: 5px 8px !important;
+}
+/* CARD */
+.vm-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    border-top: 5px solid #1b4332;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* EFEK GLOW */
+.vm-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(255,183,3,0.2), transparent);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/* HOVER */
+.vm-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.vm-card:hover::before {
+    opacity: 1;
+}
+
+/* ICON */
+.vm-card i {
+    margin-right: 8px;
+}
+/* Biar semua card sejajar tinggi */
+.team-member {
+    height: 100%;
+}
+
+/* Divisi lebih kecil */
+.small-card {
+    padding: 20px;
+}
+
+/* Center teks */
+#pengurus h6 {
+    margin-top: 10px;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bg);
+}
+
+/* HEADER */
+#header{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 15px 0;
+    transition: 0.3s;
+}
+#header TAP ATAS,.scrolled{
+    background: rgba(9, 43, 28, 0.95);
+    border-bottom:2px solid var(--accent);
+}
+.nav-link{
+    color:#fff !important;
+    font-weight:600;
+    text-transform:uppercase;
+}
+
+/* HERO */
+.hero-slider{
+    height: 80vh;
+}
+.swiper-slide{
+    background-size: cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.swiper-slide::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.5);
+}
+.slide-content{
+    position:relative;
+    z-index:2;
+    color:white;
+    text-align:center;
+}
+
+/* SECTION */
+section{
+    padding:80px 0;
+}
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+.section-title h2{
+    font-weight:700;
+}
+
+/* CARD */
+.card-custom{
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* TEAM */
+.team-member{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+.footer-custom {
+    background: #082910; /* GANTI WARNA DI SINI */
+    color: #fff;
+}
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>WAPALHI</title>
 
-  <meta name="google-adsense-account" content="ca-pub-9208046627553950">
-  <meta name="google-site-verification" content="lcpJBaQF-o7H-6wc0Uf-duquE9Tnbi05Bl5kppmsfbI" />
-
-  <title>Al-Huda Ridlwaniyah</title>
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-
-  <!-- Lucide Icon -->
-  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
-
-  <!-- Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
-  <!-- Tailwind Config -->
- <script>
-  tailwind.config = {
-    darkMode: 'class', // Mengaktifkan mode gelap berbasis class CSS
-    theme: {
-      extend: {
-        colors: {
-          nu: { DEFAULT: '#006633', dark: '#004d26' },
-          gold: { DEFAULT: '#FBBF24', dark: '#D4A017' },
-          navy: { DEFAULT: '#0f172a', light: '#1e293b' }
+    <style>
+        .news-link {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
         }
-      }
-    }
-  }
-</script>
+
+        .news-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .news-card img {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .news-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .news-card:active {
+            transform: scale(0.97);
+        }
+
+        .news-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.2), transparent);
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .news-card:hover::after {
+            opacity: 1;
+        }
+        /* CARD DIVISI */
+.divisi-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* ICON */
+.divisi-icon {
+    font-size: 40px;
+    color: #1b4332;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+/* HOVER */
+.divisi-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.divisi-card:hover .divisi-icon {
+    color: #ffb703;
+    transform: scale(1.2);
+}
+
+    </style>
 </head>
-<body class="h-full font-body text-gray-800 bg-white transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100">
 
-  <!-- ISI WEBSITE KAMU DI SINI -->
+</style>
+</head>
 
-  <style>
-    html { height: 100%; }
-    body { height: 100%; margin: 0; }
-    .app-root { width: 100%; height: 100%; overflow-y: auto; overflow-x: hidden; }
+<header id="header">
+  <div class="container d-flex align-items-center justify-content-between">
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes scaleIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
-    }
-    @keyframes slideLeft {
-      from { opacity: 0; transform: translateX(40px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-
-    .anim-fade-up { animation: fadeUp 0.7s ease-out forwards; opacity: 0; }
-    .anim-scale-in { animation: scaleIn 0.6s ease-out forwards; opacity: 0; }
-    .anim-slide-left { animation: slideLeft 0.7s ease-out forwards; opacity: 0; }
-    .anim-float { animation: float 3s ease-in-out infinite; }
-    .delay-1 { animation-delay: 0.15s; }
-    .delay-2 { animation-delay: 0.3s; }
-    .delay-3 { animation-delay: 0.45s; }
-    .delay-4 { animation-delay: 0.6s; }
-
-    .hero-overlay {
-      background: linear-gradient(135deg, rgba(0,51,26,0.82) 0%, rgba(0,102,51,0.6) 50%, rgba(0,0,0,0.5) 100%);
-    }
-
-    .hero-pattern {
-      background-image:
-        radial-gradient(circle at 20% 80%, rgba(251,191,36,0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 40%),
-        linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.02) 49%, rgba(255,255,255,0.02) 51%, transparent 52%);
-      background-size: 100% 100%, 100% 100%, 60px 60px;
-    }
-
-    .nav-dropdown {
-       display: none; 
-       z-index: index 999;
-      }
-    .nav-item:hover .nav-dropdown { display: block; }
-
-    .info-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
-    .info-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-
-    .guru-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,102,51,0.15); }
-    .guru-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-
-    .gallery-item:hover img { transform: scale(1.08); }
-    .gallery-item img { transition: transform 0.5s ease; }
-
-    .acc-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-    .acc-content.open { max-height: 400px; }
-    .acc-icon { transition: transform 0.3s ease; }
-    .acc-icon.rotated { transform: rotate(180deg); }
-
-    .star-gold { color: #FBBF24; }
-
-    .app-root::-webkit-scrollbar { width: 8px; }
-    .app-root::-webkit-scrollbar-track { background: #f1f1f1; }
-    .app-root::-webkit-scrollbar-thumb { background: #006633; border-radius: 4px; }
-
-    .wa-bubble { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .wa-bubble:hover { transform: scale(1.1); box-shadow: 0 8px 25px rgba(37,211,102,0.4); }
-
-    .section-divider {
-      width: 60px;
-      height: 4px;
-      background: linear-gradient(90deg, #006633, #FBBF24);
-      border-radius: 2px;
-    }
-
-    .testi-card { transition: transform 0.3s ease; }
-    .testi-card:hover { transform: scale(1.02); }
-
-    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
-    .mobile-menu.open { max-height: 600px; }
-
-    /* Swiper Hero Slider */
-    .hero-swiper { width: 100%; height: 100%; }
-    .swiper-slide { position: relative; height: 600px; display: flex; align-items: center; justify-content: center; background-size: cover; background-position: center; }
-    .swiper-slide::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.55); z-index: 1; }
-    .slide-content { position: relative; z-index: 10; text-align: center; color: white; max-w-2xl px-; animation: fadeUp 0.8s ease-out forwards; opacity: 0; }
-    .slide-content h2 { font-size: clamp(1.875rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 0.75rem; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
-    .slide-content p { font-size: clamp(0.875rem, 2vw, 1.125rem); color: rgba(255,255,255,0.95); margin-bottom: 2rem; line-height: 1.6; }
-    .slide-button { display: inline-flex; align-items: center; gap: 0.5rem; background: #FBBF24; color: #004d26; font-weight: 700; padding: 0.875rem 2rem; border-radius: 9999px; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 8px 20px rgba(251,191,36,0.3); border: none; cursor: pointer; font-size: 0.875rem; }
-    .slide-button:hover { background: #D4A017; transform: translateY(-3px); box-shadow: 0 12px 30px rgba(251,191,36,0.4); }
-    .swiper-button-next, .swiper-button-prev { width: 40px; height: 40px; background: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #006633; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 20; }
-    .swiper-button-next:hover, .swiper-button-prev:hover { background: #006633; color: white; box-shadow: 0 6px 20px rgba(0,102,51,0.4); transform: scale(1.1); }
-    .swiper-button-next::after, .swiper-button-prev::after { content: none !important; }
-    .swiper-button-next, .swiper-button-prev { background-image: none !important; }
-    .swiper-pagination-bullet { background: rgba(255,255,255,0.5); width: 10px; height: 10px; }
-    .swiper-pagination-bullet-active { background: white; }
-  </style>
-  <style>body { box-sizing: border-box; }</style>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
- 
- </head>
- <body class="h-full font-body text-gray-800 bg-white">
-  <div class="app-root" id="appRoot"><!-- NAVBAR -->
-   <header id="navbar" class="sticky top-0 z-50 bg-nu shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="flex items-center justify-between h-16">
-      <div class="flex items-center gap-3">
-       <div class="flex items-center justify-center">
-        <img src="assets/logo.png" class="h-12 w-auto">
-       </div>
-       <div class="leading-tight">
-        <span id="navSchoolName" class="text-white font-bold text-base sm:text-lg tracking-tight">YAPENSIS Al-HUDA RIDLWANIYAH</span> <span class="text-green-200 text-xs block hidden sm:block">مؤسسد المعهد  ودارالايتام  الهدى رضوانية الا سسلاميى</span>
-       </div>
-      </div>
-      <nav class="hidden lg:flex items-center gap-1 text-sm"><a href="#beranda" class="text-white hover:bg-nu-light px-3 py-2 rounded-lg transition flex items-center gap-1.5"><i data-lucide="home" style="width:15px;height:15px"></i> Beranda</a>
-       <div class="nav-item relative"><button class="text-white hover:bg-nu-light px-3 py-2 rounded-lg transition flex items-center gap-1.5"><i data-lucide="info" style="width:15px;height:15px"></i> Tentang <i data-lucide="chevron-down" style="width:13px;height:13px"></i></button>
-        <div class="nav-dropdown absolute top-full left-0 mt-1 bg-white rounded-xl shadow-xl py-2 min-w-[160px] border border-gray-100"><a href="#profil" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-nu transition text-sm">Profil</a> <a href="#guru" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-nu transition text-sm">Guru</a> <a href="#lokasi" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-nu transition text-sm">Lokasi</a>
-        </div>
-       </div><a href="#program" class="text-white hover:bg-nu-light px-3 py-2 rounded-lg transition flex items-center gap-1.5"><i data-lucide="book-open" style="width:15px;height:15px"></i> Program</a>
-       <div class="nav-item relative"><button class="text-white hover:bg-nu-light px-3 py-2 rounded-lg transition flex items-center gap-1.5"><i data-lucide="newspaper" style="width:15px;height:15px"></i> Informasi <i data-lucide="chevron-down" style="width:13px;height:13px"></i></button>
-        <div class="nav-dropdown absolute top-full left-0 mt-1 bg-white rounded-xl shadow-xl py-2 min-w-[160px] border border-gray-100"><a href="#berita" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-nu transition text-sm">Berita</a> <a href="#galeri" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-nu transition text-sm">Galeri</a> <a href="#faq" class="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-nu transition text-sm">FAQ</a>
-        </div>
-       </div><a > <a href="#kontak" class="text-white hover:bg-nu-light px-3 py-2 rounded-lg transition flex items-center gap-1.5"><i data-lucide="phone" style="width:15px;height:15px"></i> Kontak</a> <button id="darkToggle" class="text-white hover:bg-nu-light p-2 rounded-lg transition ml-2" title="Dark Mode"><i data-lucide="moon" style="width:18px;height:18px"></i></button>
-      </nav><button id="mobileMenuBtn" class="lg:hidden text-white p-2 rounded-lg hover:bg-nu-light transition"><i data-lucide="menu" style="width:24px;height:24px"></i></button>
-     </div>
-     <div id="mobileMenu" class="mobile-menu lg:hidden">
-      <div class="pb-4 space-y-1"><a href="#beranda" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Beranda</a> <a href="#guru" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Guru</a> <a href="#program" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Program</a> <a href="#galeri" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Galeri</a> <a href="#faq" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">FAQ</a> <a href="Penyantun
-        " class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Penyantun</a> <a href="#kontak" class="block text-white hover:bg-nu-light px-3 py-2.5 rounded-lg transition text-sm">Kontak</a>
-      </div>
-     </div>
-    </div>
-   </header><!-- HERO SLIDER SECTION -->
-   <section id="beranda" class="relative">
-    <div class="swiper hero-swiper">
-     <div class="swiper-wrapper">
-      <div class="swiper-slide" style="background-image: url('assets/alhuda\ depan.jpeg');">
-       <div class="slide-content">
-        <h2 id="slide1Title">Gabung di Al-Huda Ridlwaniyah</h2>
-        <p id="slide1Subtitle">Ponpes unggulan berbasis nilai-nilai Islam dan teknologi. Raih masa depan cerah bersama kami.</p><button class="slide-button" onclick="document.getElementById('kontak').scrollIntoView({behavior:'smooth'});"><i data-lucide="user-plus" style="width:17px;height:17px"></i> <span id="slide1Cta">Daftar Sekarang</span></button>
-       </div>
-      </div>
-      <div class="swiper-slide" style="background-image: url('assets/pekan\ madaris\ x.jpeg');">
-       <div class="slide-content">
-        <h2 id="slide2Title">Lingkungan Islami dan Nyaman</h2>
-        <p id="slide2Subtitle">Membangun karakter siswa yang berakhlak, mandiri, dan berprestasi.</p><button class="slide-button" onclick="window.open('https://wa.me/6281234567890', '_blank');"><i data-lucide="phone" style="width:17px;height:17px"></i> <span id="slide2Cta">Hubungi Kami</span></button>
-       </div>
-      </div>
-      <<div class="swiper-slide" style="background-image: url('assets/impian.jpeg');">
-       <div class="slide-content">
-        <h2 id="slide3Title">Fasilitas Lengkap 
-
-        </h2>
-        <p id="slide3Subtitle">Dari Ruang Broadcasting. Belajar lebih nyaman dan menyenangkan.</p><button class="slide-button" onclick="document.getElementById('galeri').scrollIntoView({behavior:'smooth'});"><i data-lucide="book-open" style="width:17px;height:17px"></i> <span id="slide3Cta">Lihat Fasilitas</span></button>
-       </div>
-      </div>
-     </div>
-     <div class="swiper-pagination" style="bottom: 20px;"></div>
-    </div>
-   </section><!-- FLOATING INFO CARDS -->
-   <section class="relative z-20 -mt-24 mb-12">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-      <div class="info-card bg-nu rounded-2xl p-6 text-white shadow-xl hover:scale-105 transition">
-       <div class="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center mb-4">
-        <i data-lucide="graduation-cap" class="text-gold" style="width:24px;height:24px"></i>
-       </div>
-       <h3 class="font-bold text-lg mb-2">PSB 2026</h3>
-       <p class="text-green-100 text-sm leading-relaxed mb-3">Pendaftaran Santri Baru telah dibuka! Daftar segera untuk tahun ajaran baru.</p><a href="#kontak" class="text-gold text-sm font-semibold hover:underline inline-flex items-center gap-1">Selengkapnya <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
-      </div>
-      <div class="info-card bg-nu rounded-2xl p-6 text-white shadow-xl hover:scale-105 transition">
-       <div class="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center mb-4">
-        <i data-lucide="trophy" class="text-gold" style="width:24px;height:24px"></i>
-       </div>
-       <h3 class="font-bold text-lg mb-2">Ekstrakurikuler</h3>
-       <p class="text-green-100 text-sm leading-relaxed mb-3">Pramuka, Pencak Silat, Hadroh, Kaligrafi, dan berbagai kegiatan pengembangan diri.</p><a href="#program" class="text-gold text-sm font-semibold hover:underline inline-flex items-center gap-1">Selengkapnya <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
-      </div>
-      <div class="info-card bg-nu rounded-2xl p-6 text-white shadow-xl hover:scale-105 transition">
-       <div class="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center mb-4">
-        <i data-lucide="book-open" class="text-gold" style="width:24px;height:24px"></i>
-       </div>
-       <h3 class="font-bold text-lg mb-2">Bimbingan Keagamaan</h3>
-       <p class="text-green-100 text-sm leading-relaxed mb-3">Tahfidz Al-Qur'an, Kitab Kuning, dan pembinaan akhlakul karimah intensif.</p><a href="#program" class="text-gold text-sm font-semibold hover:underline inline-flex items-center gap-1">Selengkapnya <i data-lucide="arrow-right" style="width:14px;height:14px"></i></a>
-      </div>
-     </div>
-    </div>
-    </section>
-    <!-- VISI MISI PREMIUM -->
-<section id="profil" class="py-20 bg-gradient-to-br from-nu to-green-800 text-white relative overflow-hidden">
-
-
-  <!-- overlay -->
-  <div class="absolute inset-0 bg-black/30"></div>
-
-  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    <!-- Judul -->
-    <div class="text-center mb-14">
-      <h2 class="text-3xl sm:text-4xl font-extrabold mb-3">
-        Visi & Misi
-      </h2>
-      <div class="w-20 h-1 bg-gold mx-auto rounded-full mb-4"></div>
-      <p class="text-green-100 text-sm max-w-xl mx-auto">
-        Arah dan tujuan dalam membangun generasi islami yang unggul
-      </p>
+    <!-- LOGO + TEXT -->
+    <div class="brand d-flex align-items-center">
+      <img src="assets/WPL (2).png" alt="Logo" class="logo-img">
+     <h4 class="text-white font-weight-bold">WAPALHI JEPARA</h4>
+      </span>
     </div>
 
-    <!-- GRID -->
-    <div class="grid md:grid-cols-2 gap-10">
-
-      <!-- VISI -->
-      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-xl hover:scale-105 transition duration-300">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-12 h-12 bg-gold/20 rounded-xl flex items-center justify-center">
-            <i data-lucide="eye" class="text-gold" style="width:24px;height:24px"></i>
-          </div>
-          <h3 class="text-xl font-bold">Visi</h3>
-        </div>
-
-        <p class="text-green-100 text-sm leading-relaxed">
-          “Terwujudnya generasi berakhlakul karimah, berilmu, mandiri,
-          dan berdaya guna bagi umat melalui pendidikan dan pelayanan sosial
-          berbasis nilai-nilai Islam ahlussunnah wal jamaah an-nahdliyah.”
-        </p>
-      </div>
-
-      <!-- MISI -->
-      <div class="bg-white rounded-2xl p-8 shadow-xl hover:scale-105 transition duration-300 text-gray-800">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="w-12 h-12 bg-nu/10 rounded-xl flex items-center justify-center">
-            <i data-lucide="target" class="text-nu" style="width:24px;height:24px"></i>
-          </div>
-          <h3 class="text-xl font-bold">Misi</h3>
-        </div>
-
-        <ul class="space-y-3 text-sm leading-relaxed">
-          <li>✔ Pendidikan Islam (TPQ, Madin, Pesantren)</li>
-          <li>✔ Pembinaan akhlak berbasis Al-Qur’an & Sunnah</li>
-          <li>✔ Pelayanan sosial (yatim & dhuafa)</li>
-          <li>✔ Pemberdayaan masyarakat berbasis syariah</li>
-          <li>✔ Peningkatan kualitas tenaga pendidik</li>
-          <li>✔ Pengembangan sarana prasarana</li>
-          <li>✔ Kemitraan dengan masyarakat & pemerintah</li>
-        </ul>
-      </div>
-
-    </div>
+    <!-- NAV -->
+    <ul class="nav">
+      <li><a class="nav-link" href="#hero">Beranda</a></li>
+      <li><a class="nav-link" href="#profil">Visi Misi</a></li>
+      <li><a class="nav-link" href="#pengurus">Struktur</a></li>
+      <li><a class="nav-link" href="#divisi">Divisi</a></li>
+      <li><a class="nav-link" href="#progja">Progja</a></li>
+      <li><a class="nav-link" href="#berita">Berita</a></li>
+    </ul>
 
   </div>
-</section>
-   </section><!-- STRUKTUR ORGANISASI -->
-   <section class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center mb-12">
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-nu mb-3">Struktur Organisasi</h2>
-      <div class="section-divider mx-auto mb-4"></div>
-      <p class="text-gray-500 text-sm max-w-lg mx-auto">Kepemimpinan bersama untuk kemajuan bersama</p>
-     </div><!-- Level 1: Pendiri -->
-     <div class="flex justify-center mb-10">
-      <div class="text-center hover:scale-105 transition">
-       <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-3 shadow-sm border-2 border-nu/20">
-        <img src="assets/pendiri.jpeg" class="w-full h-full object-cover">
-        </div>
-       <p class="font-bold text-gray-800 text-sm mb-1">K.H. Faidloni &amp; Hj. Raudlotun Nafisah</p><span class="inline-block bg-nu/10 text-nu text-xs font-semibold px-3 py-1 rounded-full">Pendiri</span>
-      </div>
-     </div><!-- Connector line -->
-     <div class="flex justify-center mb-4">
-      <div class="w-0.5 h-6 bg-gradient-to-b from-nu to-nu/30"></div>
-     </div><!-- Level 2: Pembina -->
-     <div class="flex justify-center items-start gap-8 mb-10 px-4 flex-wrap"><!-- Left Pengawas Group -->
-      <div class="flex flex-col gap-3">
-       <div class="text-center hover:scale-105 transition">
-        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center mx-auto mb-2 shadow-sm border-2 border-gold/20"><i data-lucide="shield" class="text-gold-dark" style="width:32px;height:32px"></i>
-        </div>
-        <p class="font-bold text-gray-800 text-xs mb-1">Kak Zainuddin</p><span class="inline-block bg-gold/10 text-gold-dark text-xs font-semibold px-2 py-0.5 rounded-full">Pengawas</span>
-       </div>
-       <div class="text-center hover:scale-105 transition">
-        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center mx-auto mb-2 shadow-sm border-2 border-gold/20"><i data-lucide="shield" class="text-gold-dark" style="width:32px;height:32px"></i>
-        </div>
-        <p class="font-bold text-gray-800 text-xs mb-1">Kak Faridul Ittihad, S.Fil.I</p><span class="inline-block bg-gold/10 text-gold-dark text-xs font-semibold px-2 py-0.5 rounded-full">Pengawas</span>
-       </div>
-      </div><!-- Center Pembina -->
-      <div class="flex flex-col items-center gap-6">
-       <div class="text-center hover:scale-105 transition">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-3 shadow-sm border-2 border-nu/20">
-        <img src="assets/kak adib pengawas.jpeg" class="w-full h-full object-cover">
-        </div>
-        <p class="font-bold text-gray-800 text-sm mb-1">Kak Adib Susilo</p><span class="inline-block bg-nu/10 text-nu text-xs font-semibold px-3 py-1 rounded-full">Pembina</span>
-       </div>
-       <div class="text-center hover:scale-105 transition">
-        <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-3 shadow-sm border-2 border-nu/20">
-        <img src="assets/kak zainudin pengawas.jpeg" class="w-full h-full object-cover">
-        </div>
-        <p class="font-bold text-gray-800 text-sm mb-1">Kak Haris Fuadi</p><span class="inline-block bg-nu/10 text-nu text-xs font-semibold px-3 py-1 rounded-full">Pembina</span>
-       </div>
-      </div><!-- Right Penyantun Group -->
-      <div class="flex flex-col gap-3">
-       <div class="text-center hover:scale-105 transition">
-        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center mx-auto mb-2 shadow-sm border-2 border-gold/20"><i data-lucide="heart-handshake" class="text-gold-dark" style="width:32px;height:32px"></i>
-        </div>
-        <p class="font-bold text-gray-800 text-xs mb-1">Dr. H. Muh Junaidi, SHI, MH</p><span class="inline-block bg-gold/10 text-gold-dark text-xs font-semibold px-2 py-0.5 rounded-full">Penyantun</span>
-       </div>
-       <div class="text-center hover:scale-105 transition">
-        <div class="w-20 h-20 rounded-full bg-gradient-to-br from-gold/20 to-gold/5 flex items-center justify-center mx-auto mb-2 shadow-sm border-2 border-gold/20"><i data-lucide="heart-handshake" class="text-gold-dark" style="width:32px;height:32px"></i>
-        </div>
-        <p class="font-bold text-gray-800 text-xs mb-1">Dr. Diding Rahmat, SH., MH</p><span class="inline-block bg-gold/10 text-gold-dark text-xs font-semibold px-2 py-0.5 rounded-full">Penyantun</span>
-       </div>
-      </div>
-     </div><!-- Divider -->
-     <div class="border-t border-gray-200 my-12"></div><!-- Level 1: Ketua Pengurus -->
-     <div class="flex justify-center mb-10">
-      <div class="text-center hover:scale-105 transition">
-       <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-3 shadow-sm border-2 border-nu/20">
-      <img src="assets/ketua.jpeg" class="w-full h-full object-cover object-top">
-    </div>
-       <p class="font-bold text-gray-800 text-sm mb-1">Dr. Wahidullah, SHI, MH</p><span class="inline-block bg-nu/10 text-nu text-xs font-semibold px-3 py-1 rounded-full">Ketua Pengurus</span>
-      </div>
-     </div><!-- Connector -->
-     <div class="flex justify-center mb-4">
-      <div class="w-0.5 h-6 bg-gradient-to-b from-nu to-nu/30"></div>
-     <!-- Level 2: Sekretaris & Bendahara -->
-<div class="flex justify-center gap-16 mb-10 px-4 flex-wrap">
+</header>
 
-  <!-- Sekretaris -->
-  <div class="text-center hover:scale-105 transition">
-    <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-3 shadow-sm border-2 border-gold/20">
-      <img src="assets/sekertaris.jpeg" class="w-full h-full object-cover object-top">
-    </div>
-    <p class="font-bold text-gray-800 text-xs mb-1">
-      Mbak Nailurrahmah, S.Pd.I
-    </p>
-    <span class="inline-block bg-gold/10 text-gold-dark text-xs font-semibold px-2 py-0.5 rounded-full">
-      Sekretaris
-    </span>
-  </div>
+<!-- HERO -->
+<div class="hero-slider swiper">
+<div class="swiper-wrapper">
 
-  <!-- Bendahara -->
-  <div class="text-center hover:scale-105 transition">
-    <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-3 shadow-sm border-2 border-gold/20">
-      <img src="assets/bendahara.jpeg" class="w-full h-full object-cover object-top">
-    </div>
-    <p class="font-bold text-gray-800 text-xs mb-1">
-      Mbak Hj. Hanik Latifah, S.Ag.
-    </p>
-    <span class="inline-block bg-gold/10 text-gold-dark text-xs font-semibold px-2 py-0.5 rounded-full">
-      Bendahara
-    </span>
-  </div>
+<div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4')">
+<div class="slide-content">
+<h1>Lestari Alamku</h1>
+<p>Mahasiswa Pecinta Alam UNISNU</p>
+</div>
+</div>
+
+<div class="swiper-slide" style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b')">
+<div class="slide-content">
+<h1>Tangguh & Beretika</h1>
+</div>
+</div>
 
 </div>
-     </div><!-- Level 3: Bidang-bidang -->
-     <div class="grid grid-cols-2 gap-8 max-w-2xl mx-auto mb-10 px-4"><!-- Left Column -->
-      <div class="space-y-4">
-       <div class="text-center hover:scale-105 transition">
-        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center mx-auto mb-2 shadow-sm border border-green-200"><i data-lucide="book" class="text-green-600" style="width:24px;height:24px"></i>
-        </div>
-        <p class="font-bold text-gray-800 text-xs mb-1">Kak Turaichan M.Pd</p><span class="inline-block bg-green-50 text-green-700 text-xs font-semibold px-2 py-0.5 rounded text-center">Pendidikan &amp; Kurikulum</span>
-       </div>
-       <div class="text-center hover:scale-105 transition">
-        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center mx-auto mb-2 shadow-sm border border-blue-200"><i data-lucide="heart" class="text-blue-600" style="width:24px;height:24px"></i>
-        </div>
-        <p class="font-bold text-gray-800 text-xs mb-1">Kak Drs. Muhid</p><span class="inline-block bg-blue-50 text-blue-700 text-xs font-semibold px-2 py-0.5 rounded text-center">Kepedulian Sosial &amp; Humas</span>
-       </div>
-       <div class="text-center hover:scale-105 transition">
-        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-100 to-purple-50 flex items-center justify-center mx-auto mb-2 shadow-sm border border-purple-200"><i data-lucide="users" class="text-purple-600" style="width:24px;height:24px"></i>
-        </div>
-        <p class="font-bold text-gray-800 text-xs mb-1">Mbak Ifadah S.Pd</p><span class="inline-block bg-purple-50 text-purple-700 text-xs font-semibold px-2 py-0.5 rounded text-center">Generasi Kepemudaan</span>
-       </div>
-      </div><!-- Right Column -->
-      <div class="space-y-4">
-       <div class="text-center hover:scale-105 transition">
-        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-pink-100 to-pink-50 flex items-center justify-center mx-auto mb-2 shadow-sm border border-pink-200"><i data-lucide="flower" class="text-pink-600" style="width:24px;height:24px"></i>
-        </div>
-        <p class="font-bold text-gray-800 text-xs mb-1">Mbak Masruroh</p><span class="inline-block bg-pink-50 text-pink-700 text-xs font-semibold px-2 py-0.5 rounded text-center">Kemuslimatan &amp; Perempuan</span>
-       </div>
-       <div class="text-center hover:scale-105 transition">
-        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-red-100 to-red-50 flex items-center justify-center mx-auto mb-2 shadow-sm border border-red-200"><i data-lucide="hands-praying" class="text-red-600" style="width:24px;height:24px"></i>
-        </div>
-        <p class="font-bold text-gray-800 text-xs mb-1">Mbak Nor Hayati</p><span class="inline-block bg-red-50 text-red-700 text-xs font-semibold px-2 py-0.5 rounded text-center">Kepedulian Sosial &amp; Humas</span>
-       </div>
-       <div class="text-center hover:scale-105 transition">
-        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-orange-100 to-orange-50 flex items-center justify-center mx-auto mb-2 shadow-sm border border-orange-200"><i data-lucide="users" class="text-orange-600" style="width:24px;height:24px"></i>
-        </div>
-        <p class="font-bold text-gray-800 text-xs mb-1">Kak Angga</p><span class="inline-block bg-orange-50 text-orange-700 text-xs font-semibold px-2 py-0.5 rounded text-center">Generasi Kepemudaan</span>
-       </div>
-      </div>
-     </div><!-- Level 4: Seni -->
-     <div class="flex justify-center mb-10 px-4">
-      <div class="text-center hover:scale-105 transition">
-       <div class="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-100 to-yellow-50 flex items-center justify-center mx-auto mb-2 shadow-sm border border-yellow-200"><i data-lucide="music" class="text-yellow-600" style="width:24px;height:24px"></i>
-       </div>
-       <p class="font-bold text-gray-800 text-xs mb-1">Kak Ribhanul Huda</p><span class="inline-block bg-yellow-50 text-yellow-700 text-xs font-semibold px-2 py-0.5 rounded">Kesenian &amp; Kreativitas</span>
-      </div>
-     </div><!-- Divider -->
-     <div class="border-t border-gray-200 my-12"></div><!-- Tim Media -->
-     <div class="text-center mb-10">
-      <h3 class="text-lg font-bold text-nu mb-2">Tim Media</h3>
-      <p class="text-gray-500 text-xs">Mengelola komunikasi digital</p>
-     </div>
-     <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 px-4">
+</div>
 
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/yapensis.alhudar/" target="_blank"
-     class="text-center hover:scale-105 transition">
-    <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-3 shadow-md border-2 border-pink-400">
-      <img src="assets/maul.jpeg" class="w-full h-full object-cover">
-    </div>
-    <p class="font-bold text-gray-800 text-xs mb-1">Kak Maulana Sidiq</p>
-    <span class="inline-block bg-pink-50 text-pink-700 text-xs font-semibold px-2 py-0.5 rounded">
-      Instagram
-    </span>
-  </a>
+<!-- PROFIL -->
+<section id="profil">
+<div class="container">
+<div class="section-title">
+<h2>Profil</h2>
+</div>
 
-  <!-- TikTok -->
-  <a href="https://www.tiktok.com/@yapensis_alhudar" target="_blank"
-     class="text-center hover:scale-105 transition">
-    <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-3 shadow-md border-2 border-gray-800">
-      <img src="assets/den.png" class="w-full h-full object-cover">
-    </div>
-    <p class="font-bold text-gray-800 text-xs mb-1">Kak A Dennis Setiawan</p>
-    <span class="inline-block bg-gray-100 text-gray-700 text-xs font-semibold px-2 py-0.5 rounded">
-      TikTok
-    </span>
-  </a>
+<p class="text-center">
+WAPALHI adalah UKM pecinta alam UNISNU Jepara yang bergerak di bidang konservasi dan kegiatan alam bebas.
+</p>
+</div>
+</section>
+ <section id="profil">
+<div class="container">
 
-  <!-- YouTube -->
-  <a href="https://youtube.com/@yapensisalhudar" target="_blank"
-     class="text-center hover:scale-105 transition">
-    <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-3 shadow-md border-2 border-red-600">
-      <img src="assets/rifqi.png" class="w-full h-full object-cover">
-    </div>
-    <p class="font-bold text-gray-800 text-xs mb-1">Kak M Rifqi Arif Hudaya</p>
-    <span class="inline-block bg-red-50 text-red-700 text-xs font-semibold px-2 py-0.5 rounded">
-      YouTube
-    </span>
-  </a>
+<div class="section-title" data-aos="fade-down">
+    <h2>Visi & Misi</h2>
+</div>
 
-  <!-- Facebook -->
-  <a href="https://www.facebook.com/" target="_blank"
-     class="text-center hover:scale-105 transition">
-    <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-3 shadow-md border-2 border-blue-600">
-      <img src="assets/feb.png" class="w-full h-full object-cover">
-    </div>
-    <p class="font-bold text-gray-800 text-xs mb-1">Kak Ari Febriyanto</p>
-    <span class="inline-block bg-blue-50 text-blue-700 text-xs font-semibold px-2 py-0.5 rounded">
-      Facebook
-    </span>
-  </a>
+<div class="row">
 
-     </div>
+<!-- VISI -->
+<div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="vm-card">
+        <h4 class="text-success">
+            <i class="bi bi-eye-fill"></i> Visi
+        </h4>
+        <p>
+            Mewujudkan insan pecinta alam yang bertaqwa, mandiri, profesional, 
+            dan bertanggung jawab terhadap kelestarian lingkungan hidup.
+        </p>
     </div>
-   </section><!-- PROFIL GURU -->
-   <section id="guru" class="py-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center mb-10"><span class="text-nu font-semibold text-sm tracking-wide uppercase">Tenaga Pengajar</span>
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-2 mb-3">Profil Guru</h2>
-      <div class="section-divider mx-auto mb-4"></div>
-      <p class="text-gray-500 max-w-lg mx-auto text-sm">Didukung oleh guru-guru berpengalaman dan berdedikasi tinggi.</p>
-     </div>
-     <div class="max-w-md mx-auto mb-8 relative"><i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" style="width:18px;height:18px"></i> <input id="guruSearch" type="text" placeholder="Cari Guru..." class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 focus:border-nu focus:ring-2 focus:ring-green-200 outline-none transition text-sm bg-white shadow-sm">
-     </div>
-     <div id="guruGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5"></div>
-     <div id="guruPagination" class="flex justify-center items-center gap-2 mt-8"></div>
-    </div>
-   </section><!-- FAQ -->
-   <section id="faq" class="py-16 bg-white">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center mb-10"><span class="text-nu font-semibold text-sm tracking-wide uppercase">Informasi</span>
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-2 mb-3">Pertanyaan Umum</h2>
-      <div class="section-divider mx-auto mb-4"></div>
-     </div>
-     <div class="space-y-3" id="faqContainer">
-      <div class="acc-item bg-gray-50 rounded-xl border border-gray-100 overflow-hidden"><button class="acc-toggle w-full flex items-center justify-between px-5 py-4 text-left hover:bg-gray-100 transition"> <span class="font-semibold text-gray-800 text-sm">Bagaimana cara mendaftar di Al-Huda Ridlwaniyah?</span> <i data-lucide="chevron-down" class="acc-icon text-nu flex-shrink-0" style="width:20px;height:20px"></i> </button>
-       <div class="acc-content">
-        <p class="px-5 pb-4 text-gray-600 text-sm leading-relaxed">Pendaftaran dapat dilakukan secara online melalui website atau langsung datang ke kantor administrasi. Siapkan fotokopi ijazah SD/MI, akta kelahiran, kartu keluarga, dan pas foto 3x4.</p>
-       </div>
-      </div>
-      <div class="acc-item bg-gray-50 rounded-xl border border-gray-100 overflow-hidden"><button class="acc-toggle w-full flex items-center justify-between px-5 py-4 text-left hover:bg-gray-100 transition"> <span class="font-semibold text-gray-800 text-sm">Apa saja program unggulan yang ditawarkan?</span> <i data-lucide="chevron-down" class="acc-icon text-nu flex-shrink-0" style="width:20px;height:20px"></i> </button>
-       <div class="acc-content">
-        <p class="px-5 pb-4 text-gray-600 text-sm leading-relaxed">Program unggulan kami meliputi Tahfidz Al-Qur'an, Kajian Kitab Kuning, English Club, Komputer &amp; IT, serta berbagai ekstrakurikuler seperti Pramuka dan Pencak Silat.</p>
-       </div>
-      </div>
-      <div class="acc-item bg-gray-50 rounded-xl border border-gray-100 overflow-hidden"><button class="acc-toggle w-full flex items-center justify-between px-5 py-4 text-left hover:bg-gray-100 transition"> <span class="font-semibold text-gray-800 text-sm">Apakah tersedia asrama untuk santri?</span> <i data-lucide="chevron-down" class="acc-icon text-nu flex-shrink-0" style="width:20px;height:20px"></i> </button>
-       <div class="acc-content">
-        <p class="px-5 pb-4 text-gray-600 text-sm leading-relaxed">Ya, tersedia asrama putra dan putri dengan fasilitas lengkap termasuk kamar tidur, ruang belajar, mushola, dan kantin. Santri dibimbing oleh ustadz/ustadzah yang tinggal di asrama.</p>
-       </div>
-      </div>
-      <div class="acc-item bg-gray-50 rounded-xl border border-gray-100 overflow-hidden"><button class="acc-toggle w-full flex items-center justify-between px-5 py-4 text-left hover:bg-gray-100 transition"> <span class="font-semibold text-gray-800 text-sm">Berapa biaya pendidikan per tahun?</span> <i data-lucide="chevron-down" class="acc-icon text-nu flex-shrink-0" style="width:20px;height:20px"></i> </button>
-       <div class="acc-content">
-        <p class="px-5 pb-4 text-gray-600 text-sm leading-relaxed">Biaya pendidikan sangat terjangkau. Untuk informasi detail, silakan hubungi panitia penerimaan santri baru melalui WhatsApp atau datang langsung ke sekolah.</p>
-       </div>
-      </div>
-      <div class="acc-item bg-gray-50 rounded-xl border border-gray-100 overflow-hidden"><button class="acc-toggle w-full flex items-center justify-between px-5 py-4 text-left hover:bg-gray-100 transition"> <span class="font-semibold text-gray-800 text-sm">Jam berapa kegiatan belajar mengajar dimulai?</span> <i data-lucide="chevron-down" class="acc-icon text-nu flex-shrink-0" style="width:20px;height:20px"></i> </button>
-       <div class="acc-content">
-        <p class="px-5 pb-4 text-gray-600 text-sm leading-relaxed">KBM dimulai pukul 07.00 WIB hingga 15.30 WIB. Untuk santri asrama, terdapat kegiatan tambahan berupa mengaji ba'da Maghrib dan Subuh.</p>
-       </div>
-      </div>
-     </div>
-    </div>
-   <!-- GALERI -->
-<section id="galeri" class="py-16 bg-gray-50">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+</div>
 
-    <!-- Judul -->
-    <div class="text-center mb-10">
-      <span class="text-nu font-semibold text-sm uppercase">Dokumentasi</span>
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-2 mb-3">
-        Galeri Kegiatan
-      </h2>
-      <div class="section-divider mx-auto mb-4"></div>
+<!-- MISI -->
+<div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+    <div class="vm-card">
+        <h4 class="text-success">
+            <i class="bi bi-bullseye"></i> Misi
+        </h4>
+        <ul class="pl-3">
+            <li>Mengembangkan potensi minat dan bakat mahasiswa di bidang kepencintaalaman.</li>
+            <li>Melakukan upaya konservasi dan edukasi lingkungan secara berkelanjutan.</li>
+            <li>Menjalin persaudaraan antar pecinta alam se-Indonesia.</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="pengurus" style="background: #eef2f1;">
+<div class="container">
+
+<div class="section-title text-center mb-5">
+    <h2>Struktur Kepengurusan</h2>
+    <p>Periode 2024 - 2025</p>
+</div>
+
+<!-- KETUA (PALING ATAS) -->
+<div class="row justify-content-center mb-4">
+    <div class="col-md-3 text-center">
+        <div class="team-member">
+            <div class="member-img"><i class="bi bi-person-badge"></i></div>
+            <h6>Ketua Umum</h6>
+            <p class="small text-muted font-weight-bold">Ahmad Fauzi</p>
+        </div>
+    </div>
+</div>
+
+<!-- SEKRETARIS & BENDAHARA -->
+<div class="row justify-content-center mb-4">
+
+    <div class="col-md-3 text-center">
+        <div class="team-member">
+            <div class="member-img"><i class="bi bi-person-gear"></i></div>
+            <h6>Sekretaris</h6>
+            <p class="small text-muted font-weight-bold">Siti Aminah</p>
+        </div>
     </div>
 
-    <!-- Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <!-- ITEM 1 -->
-      <div class="relative group rounded-2xl overflow-hidden shadow-md">
-        <img src="assets/ngaji kitab.jpeg" class="w-full h-56 object-cover">
-        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-          <span class="text-white font-semibold">Kegiatan Ngaji Kitab</span>
+    <div class="col-md-3 text-center">
+        <div class="team-member">
+            <div class="member-img"><i class="bi bi-wallet2"></i></div>
+            <h6>Bendahara</h6>
+            <p class="small text-muted font-weight-bold">Budi Santoso</p>
         </div>
-      </div>
-
-      <!-- ITEM 2 -->
-      <div class="relative group rounded-2xl overflow-hidden shadow-md">
-        <img src="assets/pekan madaris x.jpeg" class="w-full h-56 object-cover">
-        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-          <span class="text-white font-semibold">Lomba & Prestasi</span>
-        </div>
-      </div>
-
-      <!-- ITEM 3 -->
-      <div class="relative group rounded-2xl overflow-hidden shadow-md">
-        <img src="assets/wisuda.jpeg" class="w-full h-56 object-cover">
-        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-          <span class="text-white font-semibold">Wisuda TPQ, Aliyah, Wustho</span>
-        </div>
-      </div>
-
-      <!-- ITEM 4 -->
-      <div class="relative group rounded-2xl overflow-hidden shadow-md">
-        <img src="assets/pingpong.png" class="w-full h-56 object-cover">
-        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-          <span class="text-white font-semibold">Pingpong</span>
-        </div>
-      </div>
-
-      <!-- ITEM 5 -->
-      <div class="relative group rounded-2xl overflow-hidden shadow-md">
-        <img src="assets/hadroh.jpeg" class="w-full h-56 object-cover">
-        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-          <span class="text-white font-semibold">Seni Hadroh</span>
-        </div>
-      </div>
-
-      <!-- ITEM 6 -->
-      <div class="relative group rounded-2xl overflow-hidden shadow-md">
-        <img src="assets/khotmil quran.jpeg" class="w-full h-56 object-cover">
-        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-          <span class="text-white font-semibold">Khotmil Qur'an</span>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section><!-- TESTIMON -->
-   <section id="testimoni" class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="text-center mb-10"><span class="text-nu font-semibold text-sm tracking-wide uppercase">Dukungan</span>
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-2 mb-3">
-        Penyantun</h2>
-      <div class="section-divider mx-auto mb-4"></div>
-     </div>
-     <div class="relative">
-      <div id="testiTrack" class="overflow-hidden">
-       <div id="testiSlider" class="flex transition-transform duration-500 ease-out"></div>
-      </div><button id="testiPrev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 w-10 h-10 bg-white border border-gray-200 rounded-full shadow-lg flex items-center justify-center hover:bg-nu hover:text-white hover:border-nu transition z-10"><i data-lucide="chevron-left" style="width:20px;height:20px"></i></button> <button id="testiNext" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 w-10 h-10 bg-white border border-gray-200 rounded-full shadow-lg flex items-center justify-center hover:bg-nu hover:text-white hover:border-nu transition z-10"><i data-lucide="chevron-right" style="width:20px;height:20px"></i></button>
-     </div>
-     <div id="testiDots" class="flex justify-center gap-2 mt-6"></div>
-    </div>
-   </section><!-- PRE-FOOTER CTA -->
-   <section class="py-16 bg-gray-100">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-     <div class="w-16 h-16 bg-nu/10 rounded-2xl flex items-center justify-center mx-auto mb-5">
-      <i data-lucide="heart" class="text-nu" style="width:28px;height:28px"></i>
-     </div>
-     <h2 id="prefooterTitle" class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3">Yuk Bergabung Bersama Kami!</h2>
-     <p class="text-gray-500 mb-8 max-w-lg mx-auto text-sm leading-relaxed">Jadilah bagian dari keluarga besar Al-Huda Ridlwaniyah. Masa depan cerah dimulai dari pendidikan yang berkualitas.</p><a href="#kontak" class="inline-flex items-center gap-2 bg-white text-nu font-bold px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl hover:bg-gray-50 transition text-sm border border-gray-200"><i data-lucide="message-circle" style="width:17px;height:17px"></i> Hubungi Sekarang</a>
-    </div>
-   </section><!-- FOOTER -->
-   <footer id="kontak" class="bg-navy text-gray-300 pt-14 pb-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
-      <div>
-       <div class="flex items-center gap-3 mb-4">
-        <div class="flex items-center justify-center">
-         <img src="assets/logo.png" class="h-50 w-auto">
-        </div><span class="text-white font-bold text-lg">Al-Huda Ridlwaniyah</span>
-       </div>
-       <p class="text-gray-400 text-sm leading-relaxed">Yapensis Al-Huda Ridlwaniyah berkomitmen mencetak generasi muslim yang cerdas, berakhlak mulia, dan siap bersaing di era global.</p>
-      </div>
-      <div>
-       <h4 class="text-white font-bold mb-4 text-sm">Kontak</h4>
-       <div class="space-y-3 text-sm">
-        <div class="flex items-start gap-2">
-         <i data-lucide="map-pin" class="text-gold flex-shrink-0 mt-0.5" style="width:15px;height:15px"></i> <span>Jl. Jalan Raya, Hutan Jati,Pancur, Mayong,Jepara Regency, Central Java 59465</span>
+
+</div>
+
+<!-- KOORDINATOR DIVISI -->
+<div class="row justify-content-center">
+
+    <div class="col-md-2 mb-4">
+        <div class="team-member small-card">
+            <div class="member-img"><i class="bi bi-tree"></i></div>
+            <h6>Mountaineering</h6>
         </div>
-        <div class="flex items-center gap-2">
-         <i data-lucide="phone" class="text-gold flex-shrink-0" style="width:15px;height:15px"></i> <span>(+62 858-0094-3700)</span>
-        </div>
-        <div class="flex items-center gap-2">
-         <i data-lucide="mail" class="text-gold flex-shrink-0" style="width:15px;height:15px"></i> <span>yapensisalhudar@gmail.com</span>
-        </div>
-       </div>
-      </div>
-      <div>
-       <h4 class="text-white font-bold mb-4 text-sm">Sosial Media</h4>
-       <div class="flex gap-3"><a href="https://www.instagram.com/yapensis.alhudar/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-navy-light flex items-center justify-center hover:bg-nu transition cursor-pointer"><i data-lucide="instagram" class="text-gray-400 hover:text-white" style="width:16px;height:16px"></i></a> <a href="https://www.facebook.com/profile.php?id=&amp;mibextid=rS40aB7S9Ucbxw6v" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-navy-light flex items-center justify-center hover:bg-nu transition cursor-pointer"><i data-lucide="facebook" class="text-gray-400 hover:text-white" style="width:16px;height:16px"></i></a> <a href="https://youtube.com/@yapensisalhudar?si=yfbmvo-hcyiTH2h9" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-navy-light flex items-center justify-center hover:bg-nu transition cursor-pointer"><i data-lucide="youtube" class="text-gray-400 hover:text-white" style="width:16px;height:16px"></i></a> <a href="https://www.tiktok.com/@yapensis_alhudar?_r=1&amp;_t=ZS-942NvfrR8r4" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-navy-light flex items-center justify-center hover:bg-nu transition cursor-pointer"><i data-lucide="video" class="text-gray-400 hover:text-white" style="width:16px;height:16px"></i></a>
-       </div>
-       <p class="text-gray-500 text-xs mt-4">Ikuti kami untuk info terbaru seputar kegiatan dan pendaftaran.</p>
-      </div>
-<div id="lokasi" class="space-y-4">
-  <h4 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Lokasi Madrasah</h4>
-  
-  <div class="w-full h-48 rounded-xl overflow-hidden border border-gray-700 hover:border-gold transition-all duration-300 shadow-lg bg-gray-800">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.661138240212!2d110.6865201!3d-6.6888494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e711ef8417726cb%3A0xc3e659b8702c2e0b!2sYAYASAN%20AL%20HUDA%20RIDLWANIYAH!5e0!3m2!1sid!2sid!4v1715456789012!5m2!1sid!2sid" 
-      width="100%" 
-      height="100%" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-
-      </div>
-     </div>
-     <div class="border-t border-gray-700/50 pt-5 text-center">
-      <p class="text-gray-500 text-xs">© 2024 Tim Creative PP.Al-Huda Ridlwaniyah</p>
-     </div>
     </div>
-    <div class="fixed bottom-16 right-5 z-50 flex items-end gap-3">
-  
-  <!-- TEXT BUBBLE -->
-  <div class="bg-white shadow-lg rounded-xl px-4 py-3 text-sm text-gray-700 max-w-xs animate-fade-in">
-    Ingin melakukan pendaftaran di 
-    <span class="text-green-600 font-semibold">Al- Huda Ridlwaniyah</span>? 
-    Konsultasi gratis
-  </div>
 
-   </footer><!-- FLOATING WA BUBBLE -->
-   <div class="fixed bottom-1 right-5 z-50"><a href="https://wa.me/6285800943700" target="_blank" rel="noopener noreferrer" class="wa-bubble w-14 h-14 bg-green-500 rounded-full shadow-xl flex items-center justify-center hover:bg-green-600 transition" title="Konsultasi via WhatsApp">
-     <svg viewbox="0 0 24 24" width="28" height="28" fill="white">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-     </svg></a> <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full border-2 border-white animate-pulse"></span>
-   </div>
-  </div>
-  <script>
-    const guruData = [
-      { name: 'Ust. Ahmad Fauzi, S.Pd.I', subject: 'Al-Qur\'an Hadits', color: 'from-red-500 to-red-600' },
-      { name: 'Ustz. Siti Aminah, S.Ag', subject: 'Fiqih', color: 'from-rose-500 to-rose-600' },
-      { name: 'Ust. M. Ridwan, M.Pd', subject: 'Matematika', color: 'from-red-600 to-red-700' },
-      { name: 'Ustz. Nur Hasanah, S.Pd', subject: 'Bahasa Indonesia', color: 'from-rose-600 to-rose-700' },
-      { name: 'Ust. Dedi Iskandar, S.Si', subject: 'IPA Terpadu', color: 'from-red-500 to-red-600' },
-      { name: 'Ustz. Lilis Suryani, S.Pd', subject: 'Bahasa Inggris', color: 'from-rose-500 to-rose-600' },
-      { name: 'Ust. Agus Salim, S.Pd.I', subject: 'Aqidah Akhlak', color: 'from-red-600 to-red-700' },
-      { name: 'Ustz. Dewi Rahayu, S.Pd', subject: 'IPS Terpadu', color: 'from-rose-600 to-rose-700' },
-    ];
+    <div class="col-md-2 mb-4">
+        <div class="team-member small-card">
+            <div class="member-img"><i class="bi bi-life-preserver"></i></div>
+            <h6>SAR</h6>
+        </div>
+    </div>
 
-    const testiData = [
-      { name: 'Dr. H. Muh Junaidi, SHI, MH', role: 'Penyantun Utama', institution: 'Praktisi Hukum', quote: 'Pendidikan Islam yang kuat adalah investasi terbaik untuk masa depan bangsa. Saya bangga mendukung misi mulia Al-Huda.', initials: 'MJ' },
-      { name: 'Dr. Diding Rahmat, SH., MH', role: 'Penyantun', institution: 'Profesional Hukum', quote: 'Al-Huda menunjukkan komitmen nyata dalam mencetak generasi yang cerdas dan berakhlak. Apresiasi tinggi untuk dedikasi tim.', initials: 'DR' },
-      { name: 'H. Khotibul Umam, Lc, M.Pd.I', role: 'Penyantun', institution: 'Pendidik & Aktivis', quote: 'Visi Al-Huda sejalan dengan gerakan islamisasi pendidikan. Mari bersama membangun masa depan gemilang.', initials: 'KU' },
-      { name: 'Drs. H. Bambang Sutrisno, M.Si', role: 'Penyantun', institution: 'Akademisi & Praktisi', quote: 'Fasilitas dan metode pembelajaran Al-Huda memenuhi standar internasional. Layak mendapat dukungan penuh.', initials: 'BS' },
-    ];
+    <div class="col-md-2 mb-4">
+        <div class="team-member small-card">
+            <div class="member-img"><i class="bi bi-globe"></i></div>
+            <h6>Lingkungan</h6>
+        </div>
+    </div>
 
-    const GURU_PER_PAGE = 4;
-    let guruPage = 1;
-    let filteredGuru = [...guruData];
+    <div class="col-md-2 mb-4">
+        <div class="team-member small-card">
+            <div class="member-img"><i class="bi bi-triangle"></i></div>
+            <h6>Climbing</h6>
+        </div>
+    </div>
 
-    function renderGuru() {
-      const grid = document.getElementById('guruGrid');
-      const start = (guruPage - 1) * GURU_PER_PAGE;
-      const pageData = filteredGuru.slice(start, start + GURU_PER_PAGE);
+    <div class="col-md-2 mb-4">
+        <div class="team-member small-card">
+            <div class="member-img"><i class="bi bi-box-seam"></i></div>
+            <h6>Logistik</h6>
+        </div>
+    </div>
 
-      grid.innerHTML = pageData.map((g, i) => `
-        <div class="guru-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100">
-          <div class="bg-gradient-to-br ${g.color} h-28 flex items-center justify-center relative overflow-hidden">
-            <div class="absolute inset-0 opacity-10">
-              <div class="absolute top-2 left-2 w-8 h-8 rounded-full border border-white/30"></div>
-              <div class="absolute bottom-3 right-3 w-12 h-12 rounded-full border border-white/20"></div>
+</div>
+
+</div>
+</section>
+
+<!-- DIVISI wapalhi -->
+<section id="divisi" style="background:#f8f9fa;">
+    <div class="container">
+        <div class="section-title text-center mb-5">
+            <h2>Divisi Operasional</h2>
+        </div>
+
+        <div class="row justify-content-center">
+
+            <!-- DIVISI 1 -->
+           <div class="col-md-4 col-lg-3 mb-4">
+    <div class="divisi-card text-center">
+        <div class="divisi-icon">
+            <img src="assets/MOUNT.png" alt="Mountaineering">
+        </div>
+        <h6>Mountaineering</h6>
+    </div>
+</div>
+
+            <!-- DIVISI 2 -->
+            <div class="col-md-4 col-lg-3 mb-4">
+                <div class="divisi-card text-center">
+                    <div class="divisi-icon">
+            <img src="assets/SAR.png" alt="Mountaineering">
+        </div>
+                    <h6>Search & Rescue</h6>
+                </div>
             </div>
-            <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border-2 border-white/40">
-              <span class="text-white font-bold text-xl">${g.name.split(' ').slice(1,3).map(n=>n[0]).join('')}</span>
-            </div>
-          </div>
-          <div class="p-4 text-center">
-            <h4 class="font-bold text-gray-800 text-sm mb-1 leading-tight">${g.name}</h4>
-            <span class="inline-block bg-nu/10 text-nu text-xs font-medium px-3 py-1 rounded-full">${g.subject}</span>
-          </div>
+
+            <!-- DIVISI 3 -->
+            <div class="col-md-4 col-lg-3 mb-4">
+                <div class="divisi-card text-center">
+                  <div class="divisi-icon">
+            <img src="assets/LH.png" alt="Mountaineering">
         </div>
-      `).join('');
-
-      renderGuruPagination();
-      lucide.createIcons();
-    }
-
-    function renderGuruPagination() {
-      const total = Math.ceil(filteredGuru.length / GURU_PER_PAGE);
-      const container = document.getElementById('guruPagination');
-      if (total <= 1) { container.innerHTML = ''; return; }
-
-      container.innerHTML = Array.from({ length: total }, (_, i) => `
-        <button onclick="guruPage=${i+1};renderGuru();" class="w-9 h-9 rounded-lg text-sm font-semibold transition ${guruPage === i+1 ? 'bg-nu text-white shadow-md' : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-50'}">${i+1}</button>
-      `).join('');
-    }
-
-    document.getElementById('guruSearch').addEventListener('input', function(e) {
-      const q = e.target.value.toLowerCase();
-      filteredGuru = guruData.filter(g => g.name.toLowerCase().includes(q) || g.subject.toLowerCase().includes(q));
-      guruPage = 1;
-      renderGuru();
-    });
-
-    // Accordion
-    document.querySelectorAll('.acc-toggle').forEach(btn => {
-      btn.addEventListener('click', function() {
-        const content = this.nextElementSibling;
-        const icon = this.querySelector('.acc-icon');
-        const isOpen = content.classList.contains('open');
-
-        document.querySelectorAll('.acc-content').forEach(c => c.classList.remove('open'));
-        document.querySelectorAll('.acc-icon').forEach(ic => ic.classList.remove('rotated'));
-
-        if (!isOpen) {
-          content.classList.add('open');
-          icon.classList.add('rotated');
-        }
-      });
-    });
-
-    // Slider
-    let testiIndex = 0;
-
-    function renderTesti() {
-      const slider = document.getElementById('testiSlider');
-      slider.innerHTML = testiData.map(t => `
-        <div class="testi-card flex-shrink-0 w-full sm:w-1/2 px-3">
-          <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 h-full">
-            <div class="flex items-center gap-1 mb-3">
-              ${'<svg viewBox="0 0 20 20" width="16" height="16" fill="#FBBF24"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>'.repeat(5)}
+                    <h6>Lingkungan Hidup</h6>
+                </div>
             </div>
-            <p class="text-gray-600 text-sm leading-relaxed mb-5 italic">"${t.quote}"</p>
-            <div class="flex items-center gap-3 border-t border-gray-100 pt-4">
-              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-nu to-nu-light flex items-center justify-center text-white font-bold text-xs">${t.initials}</div>
-              <div>
-                <p class="font-bold text-gray-800 text-sm">${t.name}</p>
-                <p class="text-gray-400 text-xs">${t.role} · ${t.institution}</p>
-              </div>
-            </div>
-          </div>
+
+            <!-- DIVISI 4 -->
+            <div class="col-md-4 col-lg-3 mb-4">
+                <div class="divisi-card text-center">
+                    <div class="divisi-icon">
+            <img src="assets/RC.png" alt="Mountaineering">
         </div>
-      `).join('');
+                    <h6>Rock Climbing</h6>
+                </div>
+            </div>
 
-      updateTestiSlider();
-      renderTestiDots();
-    }
+            <!-- DIVISI 5 -->
+            <div class="col-md-4 col-lg-3 mb-4">
+                <div class="divisi-card text-center">
+                   <div class="divisi-icon">
+            <img src="assets/LOGISTIK.png" alt="Mountaineering">
+        </div>
+                    <h6>Logistik</h6>
+                </div>
+            </div>
 
-    function getTestiPerView() {
-      return window.innerWidth >= 640 ? 2 : 1;
-    }
+        </div>
+    </div>
+</section>
 
-    function updateTestiSlider() {
-      const slider = document.getElementById('testiSlider');
-      const perView = getTestiPerView();
-      const offset = -(testiIndex * (100 / perView));
-      slider.style.transform = `translateX(${offset}%)`;
-    }
+<!-- PROGJA -->
+ <section id="progja" style="background: #fff;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Program Kerja Unggulan</h2>
+            </div>
+            <div class="progja-table table-responsive">
+                <table class="table table-hover m-0">
+                    <thead class="thead-mapala">
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Program</th>
+                            <th>Waktu</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Diklatsar XXXII</td>
+                            <td>Mei 2026</td>
+                            <td><span class="badge badge-primary">Terencana</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Ekspedisi Konservasi Muria</td>
+                            <td>Agustus 2026</td>
+                            <td><span class="badge badge-secondary">Persiapan</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Wapalhi Mengajar (Lingkungan)</td>
+                            <td>Setiap Bulan</td>
+                            <td><span class="badge badge-success">Berjalan</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+<section id="berita" style="background: #f8f9fa;">
+<div class="container">
+<div class="section-title">
+<h2>Kabar Rimba</h2>
+</div>
 
-    function renderTestiDots() {
-      const perView = getTestiPerView();
-      const maxIndex = Math.max(0, testiData.length - perView);
-      const dots = document.getElementById('testiDots');
-      dots.innerHTML = Array.from({ length: maxIndex + 1 }, (_, i) =>
-        `<button onclick="testiIndex=${i};updateTestiSlider();renderTestiDots();" class="w-2.5 h-2.5 rounded-full transition ${testiIndex === i ? 'bg-nu w-6' : 'bg-gray-300'}" style="${testiIndex===i?'width:24px':''}"></button>`
-      ).join('');
-    }
+<div class="row">
 
-    document.getElementById('testiPrev').addEventListener('click', () => {
-      if (testiIndex > 0) { testiIndex--; updateTestiSlider(); renderTestiDots(); }
-    });
-    document.getElementById('testiNext').addEventListener('click', () => {
-      const perView = getTestiPerView();
-      const maxIndex = Math.max(0, testiData.length - perView);
-      if (testiIndex < maxIndex) { testiIndex++; updateTestiSlider(); renderTestiDots(); }
-    });
+<!-- CARD 1 -->
+<div class="col-md-4 mb-4">
+<a href="berita1.html" class="news-link">
+<div class="card news-card h-100">
+<img src="https://images.unsplash.com/photo-1533240332313-0db49b459ad6?w=400" class="card-img-top">
+<div class="card-body">
+<small class="text-success">Konservasi</small>
+<h6 class="mt-2 font-weight-bold">Penanaman 1000 Bibit</h6>
+<p class="small text-muted">Aksi nyata pelestarian lingkungan pesisir.</p>
+</div>
+</div>
+</a>
+</div>
 
-    window.addEventListener('resize', () => {
-      testiIndex = Math.min(testiIndex, Math.max(0, testiData.length - getTestiPerView()));
-      updateTestiSlider();
-      renderTestiDots();
-    });
+<!-- CARD 2 -->
+<div class="col-md-4 mb-4">
+<a href="berita2.html" class="news-link">
+<div class="card news-card h-100">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=400" class="card-img-top">
+<div class="card-body">
+<small class="text-primary">Ekspedisi</small>
+<h6 class="mt-2 font-weight-bold">Ekspedisi Gunung Muria</h6>
+<p class="small text-muted">Eksplorasi jalur pendakian.</p>
+</div>
+</div>
+</a>
+</div>
 
-    // Mobile Menu
-    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-      document.getElementById('mobileMenu').classList.toggle('open');
-    });
+<!-- CARD 3 -->
+<div class="col-md-4 mb-4">
+<a href="berita3.html" class="news-link">
+<div class="card news-card h-100">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=400" class="card-img-top">
+<div class="card-body">
+<small class="text-danger">SAR</small>
+<h6 class="mt-2 font-weight-bold">Simulasi Rescue</h6>
+<p class="small text-muted">Latihan kondisi darurat.</p>
+</div>
+</div>
+</a>
+</div>
 
-    document.querySelectorAll('#mobileMenu a').forEach(a => {
-      a.addEventListener('click', () => {
-        document.getElementById('mobileMenu').classList.remove('open');
-      });
-    });
+<!-- CARD 4 -->
+<div class="col-md-4 mb-4">
+<a href="berita4.html" class="news-link">
+<div class="card news-card h-100">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=400" class="card-img-top">
+<div class="card-body">
+<small class="text-warning">Edukasi</small>
+<h6 class="mt-2 font-weight-bold">Wapalhi Mengajar</h6>
+<p class="small text-muted">Edukasi lingkungan.</p>
+</div>
+</div>
+</a>
+</div>
 
-    // Dark Mode
-    const toggleBtn = document.getElementById('darkToggle');
-toggleBtn.addEventListener('click', function () {
-  document.documentElement.classList.toggle('dark');
+<!-- CARD 5 -->
+<div class="col-md-4 mb-4">
+<a href="berita5.html" class="news-link">
+<div class="card news-card h-100">
+<img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400" class="card-img-top">
+<div class="card-body">
+<small class="text-info">Pendakian</small>
+<h6 class="mt-2 font-weight-bold">Pendakian Bersama</h6>
+<p class="small text-muted">Kegiatan solidaritas.</p>
+</div>
+</div>
+</a>
+</div>
 
-  const isDark = document.documentElement.classList.contains('dark');
-  this.innerHTML = isDark
-    ? '<i data-lucide="sun" style="width:18px;height:18px"></i>'
-    : '<i data-lucide="moon" style="width:18px;height:18px"></i>';
+<!-- CARD 6 -->
+<div class="col-md-4 mb-4">
+<a href="berita6.html" class="news-link">
+<div class="card news-card h-100">
+<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=400" class="card-img-top">
+<div class="card-body">
+<small class="text-secondary">Lingkungan</small>
+<h6 class="mt-2 font-weight-bold">Aksi Bersih Pantai</h6>
+<p class="small text-muted">Gerakan peduli sampah.</p>
+</div>
+</div>
+</a>
+</div>
+            </section>
+        <div
+    <footer class="footer-custom text-white py-5">
+    <div class="container text-center">
+        <h4>MAPALA WAPALHI JEPARA</h4>
+        <p>Sekretariat: Gedung Ormawa UNISNU, Jln. Taman Siswa (Pekeng) Tahunan Jepara</p>
+        
+   <div class="h4 mt-3">
 
-  lucide.createIcons();
-  
+    <a href="https://www.instagram.com/wapalhi_jepara/" target="_blank">
+        <i class="bi bi-instagram mx-2"></i>
+    </a>
+
+    <a href="https://www.youtube.com/@wapalhijeparaofficial9210" target="_blank">
+        <i class="bi bi-youtube mx-2"></i>
+    </a>
+
+    <a href="https://www.facebook.com/wapalhi.jepara?locale=id_ID" target="_blank">
+        <i class="bi bi-facebook mx-2"></i>
+    </a>
+
+    <a href="https://www.tiktok.com/@mapalawapalhi_jepara" target="_blank">
+        <i class="bi bi-tiktok mx-2"></i>
+    </a>
+
+</div>
+
+<hr class="bg-secondary mt-4">
+
+<p class="mb-0 small">&copy; 2026 WAPALHI JEPARA All rights reserved.</p>
+    </div>
+</footer>
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+new Swiper('.swiper', {
+loop:true,
+autoplay:{delay:4000},
 });
-    // Element SDK
-    const defaultConfig = {
-      school_name: 'Al-Huda Ridlwaniyah',
-      slide1_title: 'Gabung di Al-Huda Ridlwaniyah',
-      slide1_subtitle: 'Ponpes berbasis nilai-nilai Islam dan teknologi.',
-      slide1_cta: 'Daftar Sekarang',
-      slide2_title: 'Lingkungan Islami dan Nyaman',
-      slide2_subtitle: 'Membangun karakter siswa yang berakhlak, mandiri, dan berprestasi.',
-      slide2_cta: 'Hubungi Kami',
-      slide3_title: 'Fasilitas Lengkap & Modern',
-      slide3_subtitle: 'Dari Broadcasting,Pingpong,Rebana,Panjat Tebing. Belajar lebih nyaman dan menyenangkan.',
-      slide3_cta: 'Lihat Fasilitas',
-      prefooter_title: 'Yuk Bergabung Bersama Kami!',
-      background_color: '#ffffff',
-      surface_color: '#006633',
-      text_color: '#1f2937',
-      primary_action_color: '#FBBF24',
-      secondary_action_color: '#0f172a',
-      font_family: 'Plus Jakarta Sans',
-      font_size: 16
-    };
 
-    function applyConfig(config) {
-      const c = { ...defaultConfig, ...config };
-      document.getElementById('navSchoolName').textContent = c.school_name;
-      document.getElementById('slide1Title').textContent = c.slide1_title;
-      document.getElementById('slide1Subtitle').textContent = c.slide1_subtitle;
-      document.getElementById('slide1Cta').textContent = c.slide1_cta;
-      document.getElementById('slide2Title').textContent = c.slide2_title;
-      document.getElementById('slide2Subtitle').textContent = c.slide2_subtitle;
-      document.getElementById('slide2Cta').textContent = c.slide2_cta;
-      document.getElementById('slide3Title').textContent = c.slide3_title;
-      document.getElementById('slide3Subtitle').textContent = c.slide3_subtitle;
-      document.getElementById('slide3Cta').textContent = c.slide3_cta;
-      document.getElementById('prefooterTitle').textContent = c.prefooter_title;
-      document.body.style.backgroundColor = c.background_color;
-      const fontStack = `${c.font_family}, 'Plus Jakarta Sans', sans-serif`;
-      document.body.style.fontFamily = fontStack;
-      const base = c.font_size || 16;
-      document.body.style.fontSize = `${base}px`;
-    }
-
-    if (window.elementSdk) {
-      window.elementSdk.init({
-        defaultConfig,
-        onConfigChange: async (config) => {
-          applyConfig(config);
-        },
-        mapToCapabilities: (config) => ({
-          recolorables: [
-            { get: () => config.background_color || defaultConfig.background_color, set: (v) => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); } },
-            { get: () => config.surface_color || defaultConfig.surface_color, set: (v) => { config.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); } },
-            { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },
-            { get: () => config.primary_action_color || defaultConfig.primary_action_color, set: (v) => { config.primary_action_color = v; window.elementSdk.setConfig({ primary_action_color: v }); } },
-            { get: () => config.secondary_action_color || defaultConfig.secondary_action_color, set: (v) => { config.secondary_action_color = v; window.elementSdk.setConfig({ secondary_action_color: v }); } }
-          ],
-          borderables: [],
-          fontEditable: {
-            get: () => config.font_family || defaultConfig.font_family,
-            set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); }
-          },
-          fontSizeable: {
-            get: () => config.font_size || defaultConfig.font_size,
-            set: (v) => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); }
-          }
-        }),
-        mapToEditPanelValues: (config) => new Map([
-          ['school_name', config.school_name || defaultConfig.school_name],
-          ['slide1_title', config.slide1_title || defaultConfig.slide1_title],
-          ['slide1_subtitle', config.slide1_subtitle || defaultConfig.slide1_subtitle],
-          ['slide1_cta', config.slide1_cta || defaultConfig.slide1_cta],
-          ['slide2_title', config.slide2_title || defaultConfig.slide2_title],
-          ['slide2_subtitle', config.slide2_subtitle || defaultConfig.slide2_subtitle],
-          ['slide2_cta', config.slide2_cta || defaultConfig.slide2_cta],
-          ['slide3_title', config.slide3_title || defaultConfig.slide3_title],
-          ['slide3_subtitle', config.slide3_subtitle || defaultConfig.slide3_subtitle],
-          ['slide3_cta', config.slide3_cta || defaultConfig.slide3_cta],
-          ['prefooter_title', config.prefooter_title || defaultConfig.prefooter_title]
-        ])
-      });
-    }
-
-    // Initialize Swiper
-    const swiper = new Swiper('.hero-swiper', {
-      loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
-      },
-      speed: 800
-    });
-
-    renderGuru();
-    renderTesti();
-    lucide.createIcons();
-    // Smooth scroll fix
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  });
+$(window).scroll(function(){
+if($(this).scrollTop()>50){
+$('#header').addClass('scrolled');
+}else{
+$('#header').removeClass('scrolled');
+}
 });
-  </script>
- 
+</script>
+
+</body>
+</html>
